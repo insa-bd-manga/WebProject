@@ -1,1 +1,1 @@
-print("Hello les nazes lol !!")
+print("CONFLIIIIT")
