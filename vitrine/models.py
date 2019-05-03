@@ -3,6 +3,8 @@ from django.utils import timezone
 
 
 class Tag(models.Model):
+    """Tag pour les articles
+    :clé_primaire id: généré implicitement"""
     nom_tag = models.CharField(max_length=30)
 
     def __str__(self):
@@ -10,12 +12,15 @@ class Tag(models.Model):
 
 
 class Article(models.Model):
+    """Article
+    :clé_primaire id: généré implicitement
+    :clé_étrangère tag: ManyToMany (un article peut avoir 0,1,plusieurs tags et vice-versa)"""
     titre = models.CharField(max_length=100)
-    auteur = models.CharField(max_length=42)
-    contenu = models.TextField(null=True)
-    date = models.DateTimeField(default=timezone.now,
-                                verbose_name="Date de parution")
-    categorie = models.ForeignKey('Tag', on_delete=models.CASCADE)
+    auteur = models.CharField(max_length=50, null=True)
+    date = models.DateTimeField(default=timezone.now)
+    contenu = models.TextField()
+    tag = models.ManyToManyField(Tag, null=True)
+    epingler = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['date']
@@ -23,4 +28,20 @@ class Article(models.Model):
     def __str__(self):
         return self.titre
 
+
+class Commentaires(models.Model):
+    """Commentaire lié à un article
+    :clé_primaire id: généré implicitement
+    :clé_étrangère id_article: OneToMany (un commentaire ne peut être lié qu'à un seul article et un article peut avoir
+    plusieurs commentaires)"""
+    id_article = models.ForeignKey('Article', on_delete=models.CASCADE)
+    date = models.DateTimeField(default=timezone.now)
+    #auteur = models.ForeignKey('Auteur', null=True, on_delete=models.SET_NULL)
+    contenu = models.TextField()
+
+    class Meta:
+        ordering = ['date']
+
+    def __str__(self):
+        return self.contenu
 
