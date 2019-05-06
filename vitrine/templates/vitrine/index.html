@@ -5,6 +5,21 @@
     <title>INSA BD/Manga</title>
 </head>
 <body>
-    <p>INDEX</p>
+    <h1>INDEX</h1>
+    <br>
+    <p>photo puis description du club</p>
+    <br>
+    <br>
+
+    <h2>les 3 derniers articles</h2>
+
+    <!-POUR AVOIR LES 3 DERNIERS ARTICLES -->
+    {% for article in last_articles %}
+        <h3>{{ article.titre }}</h3>
+        <p>{{ article.contenu }}</p>
+    {% endfor %}
+    <!- FIN ARTICLES -->
+
+
 </body>
 </html>

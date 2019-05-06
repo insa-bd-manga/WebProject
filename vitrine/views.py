@@ -2,7 +2,7 @@ from datetime import datetime
 from django.shortcuts import render, get_object_or_404
 
 #pour les modèles
-#from blog2.models import
+from vitrine.models import Article, Commentaire, Tag
 
 #pour les formulaires
 #from .forms import
@@ -18,7 +18,10 @@ def index(request):
 
     :return paquet http contenant la page"""
 
-    return render(request, 'vitrine/index.html')
+    # récupération des 3 derniers articles
+    query = Article.objects.all().order_by("-date")[:3]
+
+    return render(request, 'vitrine/index.html', {"last_articles": query})
 
 
 def ouvrages(request):

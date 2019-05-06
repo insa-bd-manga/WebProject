@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ad607c4-f835-4d01-9ac5-914627b3d094" name="Default Changelist" comment="Project Creation!!!">
-      <change afterPath="$PROJECT_DIR$/vitrine/templates/vitrine/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vitrine/urls.py" afterDir="false" />
+    <list default="true" id="1ad607c4-f835-4d01-9ac5-914627b3d094" name="Default Changelist" comment="ajout des modèles et de la session admin">
+      <change afterPath="$PROJECT_DIR$/vitrine/static/vitrine/MORGAN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vitrine/static/vitrine/MORGAN2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vitrine/static/vitrine/club.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WebProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebProject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitrine/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vitrine/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitrine/templates/vitrine/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vitrine/templates/vitrine/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitrine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/vitrine/views.py" afterDir="false" />
     </list>
     <list id="3b4747dd-6e9a-4517-af86-a62ba0282bd6" name="Revert &quot;voilà, un petit test pour comprendre comment ça marche&quot;" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,56 +20,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../tutoweb/blog2/urls.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state>
-                    <folding>
-                      <element signature="e#0#28#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../tutoweb/blog2/views.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="243">
-                    <caret line="9" lean-forward="true" selection-start-line="7" selection-end-line="9" />
-                    <folding>
-                      <element signature="e#0#29#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/../tutoweb/tutoweb/settings.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-1346" />
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../tutoweb/tutoweb/urls.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state>
-                    <folding>
-                      <element signature="e#631#663#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="WebProject" />
@@ -78,10 +34,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebProject/settings.py">
+        <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="65" column="70" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+            <state relative-caret-position="459">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -90,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/vitrine/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -101,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vitrine/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="405">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -113,17 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vitrine/templates/vitrine/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="513">
+              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../tutoweb/blog2/models.py">
+        <entry file="file://$PROJECT_DIR$/vitrine/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret selection-end-line="61" selection-end-column="25" />
+            <state relative-caret-position="513">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -132,21 +88,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vitrine/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebProject/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
+            <state relative-caret-position="513">
               <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
               <folding>
                 <element signature="e#634#666#0" expanded="true" />
@@ -169,7 +113,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="op" />
+        <entry key="$PROJECT_DIR$" value="Master" />
       </map>
     </option>
     <option name="RESET_MODE" value="MIXED" />
@@ -208,19 +152,21 @@
         <option value="$PROJECT_DIR$/hello_world_Leo.py" />
         <option value="$PROJECT_DIR$/appSuper/en_cours.py" />
         <option value="$PROJECT_DIR$/appSuper/fini.py" />
-        <option value="$PROJECT_DIR$/vitrine/templates/vitrine/index.html" />
-        <option value="$PROJECT_DIR$/WebProject/urls.py" />
         <option value="$PROJECT_DIR$/WebProject/settings.py" />
         <option value="$PROJECT_DIR$/vitrine/urls.py" />
-        <option value="$PROJECT_DIR$/vitrine/views.py" />
+        <option value="$PROJECT_DIR$/vitrine/templates/vitrine/indexBIS.html" />
         <option value="$PROJECT_DIR$/vitrine/models.py" />
+        <option value="$PROJECT_DIR$/vitrine/views.py" />
+        <option value="$PROJECT_DIR$/vitrine/templates/vitrine/index.html" />
+        <option value="$PROJECT_DIR$/WebProject/urls.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="935" />
-    <option name="width" value="992" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -245,6 +191,32 @@
             <path>
               <item name="WebProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebProject" type="462c0819:PsiDirectoryNode" />
+              <item name="vitrine" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProject" type="462c0819:PsiDirectoryNode" />
+              <item name="vitrine" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="vitrine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProject" type="462c0819:PsiDirectoryNode" />
+              <item name="vitrine" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProject" type="462c0819:PsiDirectoryNode" />
+              <item name="vitrine" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="vitrine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebProject" type="462c0819:PsiDirectoryNode" />
               <item name="WebProject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -258,10 +230,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vitrine/static/vitrine" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Desktop\WebProject\vitrine\static\vitrine" />
+      <recent name="D:\Desktop\WebProject\vitrine\static" />
+      <recent name="D:\Desktop\WebProject\vitrine\templates\vitrine" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\WebProject\vitrine\static\vitrine" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -314,7 +296,12 @@
       <workItem from="1556134184228" duration="6188000" />
       <workItem from="1556182346569" duration="5912000" />
       <workItem from="1556865832612" duration="271000" />
-      <workItem from="1556866160774" duration="6450000" />
+      <workItem from="1556866160774" duration="12558000" />
+      <workItem from="1556965414516" duration="923000" />
+      <workItem from="1557075643707" duration="710000" />
+      <workItem from="1557137605013" duration="1755000" />
+      <workItem from="1557139470627" duration="22000" />
+      <workItem from="1557174698886" duration="4563000" />
     </task>
     <task id="LOCAL-00001" summary="rien">
       <created>1556134261289</created>
@@ -393,17 +380,45 @@
       <option name="project" value="LOCAL" />
       <updated>1556867558423</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Création de l'application &quot;vitrine&quot; et bases de cette même application">
+      <created>1556877003782</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556877003782</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Création de l'application &quot;vitrine&quot; et bases de cette même application">
+      <created>1556877019211</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1556877019211</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ajout des modèles et de la session admin">
+      <created>1556903918191</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1556903918191</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ajout des modèles et de la session admin">
+      <created>1556903976080</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1556903976080</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18821000" />
+    <option name="totallyTimeSpent" value="32902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918434" visible="true" weight="0.12846482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918434" visible="true" weight="0.15351813" />
       <window_info id="Structure" order="1" sideWeight="0.5008157" side_tool="true" weight="0.25543478" />
       <window_info id="Favorites" order="2" sideWeight="0.5008157" side_tool="true" weight="0.25543478" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -414,10 +429,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49891305" weight="0.3261105" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49891305" weight="0.14084508" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50108695" side_tool="true" weight="0.32932165" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.23185265" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -522,16 +537,15 @@
     <MESSAGE value="fin d'un long et dur labeur" />
     <MESSAGE value="Project Creation !!!" />
     <MESSAGE value="Project Creation!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Creation!!!" />
+    <MESSAGE value="Création de l'application &quot;vitrine&quot; et bases de cette même application" />
+    <MESSAGE value="ajout des modèles et de la session admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout des modèles et de la session admin" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.md" />
     <entry file="file://$PROJECT_DIR$/appSuper/hello_les_nazes.py" />
     <entry file="file://$PROJECT_DIR$/appSuper/fini.py" />
     <entry file="file://$PROJECT_DIR$/hello_world_Leo.py" />
-    <entry file="file://$PROJECT_DIR$/WebProject/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../tutoweb/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -555,13 +569,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tutoweb/blog2/views.py">
+    <entry file="file://$PROJECT_DIR$/../tutoweb/blog2/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" lean-forward="true" selection-start-line="7" selection-end-line="9" />
+        <state relative-caret-position="108">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/related.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
         </state>
       </provider>
     </entry>
@@ -570,6 +591,16 @@
         <state>
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tutoweb/blog2/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" selection-start-line="7" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -583,71 +614,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebProject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebProject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="65" column="70" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+        <state relative-caret-position="162">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../tutoweb/tutoweb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1346" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vitrine/templates/vitrine/index.html">
+    <entry file="file://$PROJECT_DIR$/vitrine/templates/vitrine/indexBIS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="459">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vitrine/urls.py">
+    <entry file="file://$PROJECT_DIR$/WebProject/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="459">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vitrine/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vitrine/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="405">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tutoweb/blog2/models.py">
+    <entry file="file://$PROJECT_DIR$/vitrine/templates/vitrine/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret selection-end-line="61" selection-end-column="25" />
+        <state relative-caret-position="513">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vitrine/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vitrine/models.py">
+    <entry file="file://$PROJECT_DIR$/WebProject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="513">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#634#666#0" expanded="true" />
           </folding>
         </state>
       </provider>

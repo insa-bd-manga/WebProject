@@ -29,7 +29,7 @@ class Article(models.Model):
         return self.titre
 
 
-class Commentaires(models.Model):
+class Commentaire(models.Model):
     """Commentaire lié à un article
     :clé_primaire id: généré implicitement
     :clé_étrangère id_article: OneToMany (un commentaire ne peut être lié qu'à un seul article et un article peut avoir
