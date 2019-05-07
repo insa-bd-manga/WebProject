@@ -11,7 +11,7 @@ from vitrine.models import Article, Commentaire, Tag
 def index(request):
     """l'index est la page d'accueil du site
 
-    page compasée d'une descrption statique, puis des 3 derniers articles sortis
+    page composée d'une description statique, puis des 3 derniers articles sortis
 
     :param request : OSEF
     :type request : requête HTTP
@@ -29,6 +29,14 @@ def ouvrages(request):
 
 
 def festival(request):
+    """page sur le festival et le concours BD
+
+        page composée d'une description statique, puis des articles tagués "festival" et "concours"
+
+        :param request : OSEF
+        :type request : requête HTTP
+
+        :return paquet http contenant la page"""
     return 1
 
 
