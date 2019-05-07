@@ -16,10 +16,10 @@ class Article(models.Model):
     :clé_primaire id: généré implicitement
     :clé_étrangère tag: ManyToMany (un article peut avoir 0,1,plusieurs tags et vice-versa)"""
     titre = models.CharField(max_length=100)
-    auteur = models.CharField(max_length=50, null=True)
-    date = models.DateTimeField(default=timezone.now)
+    auteur = models.CharField(max_length=50, null=True, verbose_name="auteur de l'article")
+    date = models.DateTimeField(default=timezone.now, verbose_name="date de parution")
     contenu = models.TextField()
-    tag = models.ManyToManyField(Tag, null=True)
+    tag = models.ManyToManyField(Tag)
     epingler = models.BooleanField(default=False)
 
     class Meta:
@@ -28,8 +28,12 @@ class Article(models.Model):
     def __str__(self):
         return self.titre
 
+    def get_tag(self):
+        """retourne les tags dans un string sous la forme "tag1, tag2, tag3" """
+        return ", ".join([a.nom_tag for a in self.tag.all()])
 
-class Commentaires(models.Model):
+
+class Commentaire(models.Model):
     """Commentaire lié à un article
     :clé_primaire id: généré implicitement
     :clé_étrangère id_article: OneToMany (un commentaire ne peut être lié qu'à un seul article et un article peut avoir
