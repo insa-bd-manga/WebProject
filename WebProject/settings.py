@@ -125,5 +125,14 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = './static/'
 
+
+# CKEditor : éditeur HTML.
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Advanced',
+    },
+}
+
 CKEDITOR_UPLOAD_PATH = "./static/ckeditor_uploads/"
 

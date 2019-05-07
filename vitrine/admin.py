@@ -32,6 +32,8 @@ class ArticleAdmin(admin.ModelAdmin):
         }),
     )
 
+    form = ArticleAdminForm
+
 
     def apercu_contenu(self, article):
         """
