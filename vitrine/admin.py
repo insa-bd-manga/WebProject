@@ -3,10 +3,16 @@ from django.utils.text import Truncator
 from django import forms
 from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
-from .models import Tag, Article, Commentaire
+from vitrine.models import Tag, Article, Commentaire
 
 
 class ArticleAdminForm(forms.ModelForm):
+    """Cette class définit le champs pour la rédaction d'articles.
+
+    Utilise le widget CKEditor pour faire des beaux articles en HTML
+    #TODO : si on a le temps, ajouter l'upload de fichier.
+    En effet, actuellement, on ne peut ajouter des images que depuis une URL."""
+
     contenu = forms.CharField(widget=CKEditorWidget())
     class Meta:
         model = Article
@@ -14,6 +20,10 @@ class ArticleAdminForm(forms.ModelForm):
 
 
 class ArticleAdmin(admin.ModelAdmin):
+    """Cette class définit l'espace d'édition des articles.
+
+    Utilise la classe ArticleAdminForm"""
+
     list_display = ('titre', 'auteur', 'get_tag', 'apercu_contenu', 'date')
     list_filter = ('titre', 'auteur', 'tag', 'date')
     #ordering = ('date',)
@@ -36,8 +46,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 
     def apercu_contenu(self, article):
-        """
-        Retourne les 40 premiers caractères du contenu de l'article,
+        """Retourne les 40 premiers caractères du contenu de l'article,
         suivi de points de suspension si le texte est plus long.
         """
         return Truncator(article.contenu).chars(40, truncate='...')
@@ -45,9 +54,6 @@ class ArticleAdmin(admin.ModelAdmin):
     # En-tête de notre colonne
     apercu_contenu.short_description = 'Aperçu du contenu'
 
-
-class editeurHTML:
-    js = ("//cdn.ckeditor.com/4.11.4/standard/ckeditor.js")
 
 
 admin.site.register(Article, ArticleAdmin)
