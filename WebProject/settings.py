@@ -136,3 +136,13 @@ CKEDITOR_CONFIGS = {
 
 CKEDITOR_UPLOAD_PATH = "./static/ckeditor_uploads/"
 
+
+#Système de mailing
+EMAIL_HOST = "smtp-mail.outlook.com"
+EMAIL_HOST_USER = "clubbdinsa@outlook.fr"
+with open("passwords.txt", "r") as file:
+    EMAIL_HOST_PASSWORD = file.readline()
+    print(EMAIL_HOST_PASSWORD)
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+

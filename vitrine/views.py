@@ -7,8 +7,11 @@ from vitrine.models import Article, Commentaire, Tag
 #Pour des query plus complexes que le set de base
 from django.db.models import Q
 
+#Pour les mails
+from django.core.mail import send_mail
+
 #pour les formulaires
-#from .forms import
+from .forms import ContactForm
 
 
 def index(request):
@@ -137,5 +140,27 @@ def contact(request):
     :param request : OSEF
     :type request : requête http
 
-    :return paquet http contenant la page"""
-    return render(request, 'vitrine/contact.html', locals())
+    :return paquet http contenant la page
+
+    :raise SMTPException : si l'envoi du mail foire."""
+
+    envoi = False
+
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        sujet = form.cleaned_data['sujet']
+        message = form.cleaned_data['message']
+        envoyeur = form.cleaned_data['envoyeur']
+        renvoi = form.cleaned_data['renvoi']
+
+        sujet_mail = "[contact site] {}".format(sujet)
+        contenu_mail = '\n'.join(["message de la part de : {}".format(envoyeur), "", message])
+        send_mail(sujet_mail, contenu_mail, "clubbdinsa@outlook.fr", ['clubbdinsa@gmail.com'], fail_silently=False)
+
+        if renvoi == True:
+            sujet_mail = "[copie contact INSA BD/Manga] {}".format(sujet)
+            send_mail(sujet_mail, contenu_mail, "clubbdinsa@outlook.fr", [envoyeur], fail_silently=False)
+
+        envoi = True
+
+    return render(request, 'vitrine/contact.html', {"envoi": envoi})
