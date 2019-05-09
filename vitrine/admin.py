@@ -45,11 +45,6 @@ class ArticleAdmin(admin.ModelAdmin):
     # En-tête de notre colonne
     apercu_contenu.short_description = 'Aperçu du contenu'
 
-
-class editeurHTML:
-    js = ("//cdn.ckeditor.com/4.11.4/standard/ckeditor.js")
-
-
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Tag)
 admin.site.register(Commentaire)
