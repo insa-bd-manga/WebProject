@@ -92,7 +92,7 @@ def article(request, id_article, num_page):
 
     article=get_object_or_404(Article, id=id_article)
     n=10
-    query = Commentaire.objects.filter(id_article=id_article).order_by("-date")[num_page:num_page+n]
+    query = Commentaire.objects.filter(id_article=id_article).order_by("-date")[n*(num_page):n*(num_page+1)]
     return render(request, 'vitrine/article.html', {"article": article, "commentaires": query, "page": num_page})
 
 
