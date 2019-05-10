@@ -56,7 +56,7 @@ def rechercheOuvrages(request):
 #     return render(request, 'vitrine/ouvrage.html', {"livres": query, "page": num_page})
 
 
-def actus(request, num_page, tag=""):
+def actus(request, num_page=0, tag=""):
     """La page actus affiche les n dernières actus du site
 
     :param request : OSEF
