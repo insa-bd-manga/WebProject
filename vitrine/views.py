@@ -153,14 +153,17 @@ def contact(request):
         envoyeur = form.cleaned_data['envoyeur']
         renvoi = form.cleaned_data['renvoi']
 
+        #envoie mail pour le club
         sujet_mail = "[contact site] {}".format(sujet)
         contenu_mail = '\n'.join(["message de la part de : {}".format(envoyeur), "", message])
         send_mail(sujet_mail, contenu_mail, "clubbdinsa@outlook.fr", ['clubbdinsa@gmail.com'], fail_silently=False)
 
+        #envoie mail facultatif pour le client
         if renvoi == True:
             sujet_mail = "[copie contact INSA BD/Manga] {}".format(sujet)
             send_mail(sujet_mail, contenu_mail, "clubbdinsa@outlook.fr", [envoyeur], fail_silently=False)
 
+        #si envoie réussi
         envoi = True
 
-    return render(request, 'vitrine/contact.html', {"envoi": envoi})
+    return render(request, 'vitrine/contact.html', {"envoi": envoi, "form":form})

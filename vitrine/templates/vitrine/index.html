@@ -15,8 +15,8 @@
 
     <!-POUR AVOIR LES 3 DERNIERS ARTICLES -->
     {% for article in last_articles %}
-        <h3>{{ article.titre }}</h3>
-        <p>{{ article.contenu }}</p>
+        <h3>{{ article.titre|safe }}</h3>
+        <p>{{ article.contenu|safe }}</p>
     {% endfor %}
     <!- FIN ARTICLES -->
 
