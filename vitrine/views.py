@@ -52,7 +52,7 @@ def rechercheOuvrages(request):
 #     #Cherche dans la bdd les articles qui contiennent l'auteur et le titre renseigné. Si un des paramètres est vide,
 #     #il n'influera pas sur la recherche Si les deux sont vides, on a toute la Bdd
 #     n=10
-#     query=Ouvrage.objects.filter(Q(auteur__icontains=auteur) & Q(titre__icontains=titre)).order_by("titre")[num_page:num_page+n]
+#     query=Ouvrage.objects.filter(Q(auteur__icontains=auteur) & Q(titre__icontains=titre)).order_by("titre")[n*(num_page):n*(num_page+1)]
 #     return render(request, 'vitrine/ouvrage.html', {"livres": query, "page": num_page})
 
 
@@ -71,7 +71,7 @@ def actus(request, num_page, tag=""):
 
     #Récupération des n articles avec le tag spécifié
     n = 10
-    query = Article.objects.filter(tag__nom_tag__contains=tag).order_by("-date")[num_page:num_page+n]
+    query = Article.objects.filter(tag__nom_tag__contains=tag).order_by("-date")[n*(num_page):n*(num_page+1)]
     return render(request, 'vitrine/actus.html', {"last_articles": query, "page" : num_page})
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
 
@@ -108,7 +108,7 @@ def festival(request, num_page):
 
     #Récupère les n articles qui ont le tag "festival" ou "concours", met en premier ceux qui sont épinglés, et trie ensuite par date
     n=10
-    query = Article.objects.filter(Q(tag="festival") | Q(tag="concours")).order_by("epingler", "-date")[num_page:num_page+n]
+    query = Article.objects.filter(Q(tag="festival") | Q(tag="concours")).order_by("epingler", "-date")[n*(num_page):n*(num_page+1)]
     return render(request, 'vitrine/festival.html', {"last_articles": query, "page" : num_page})
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
 
