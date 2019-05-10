@@ -138,4 +138,7 @@ def contact(request):
     :type request : requête http
 
     :return paquet http contenant la page"""
+
+
+
     return render(request, 'vitrine/contact.html', locals())
