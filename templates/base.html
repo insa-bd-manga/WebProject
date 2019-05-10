@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titreOnglet %}INSA BD/Manga {% endblock %}</title>
+
+  <!-- Custom styles for this template -->
+    {% load static %}
+    <link href="{% static 'vitrine/style.css'%}" rel="stylesheet">
+
+</head>
+<body>
+
+    {% block nav %}
+    <ul>
+        <li><a class="active" href="{% url "index" %}">Acceuil</a></li>
+        <li><a href="#actus">Actus</a></li>
+        <li><a href="#festival">Le festival</a></li>
+        <li><a href="#ouvrages">Nos Ouvrages</a></li>
+        <li><a href="{% url "contact" %}">Contact</a></li>
+        <li><a href="#archives">Archives</a></li>
+        <li><a href="{%  url "infos" %}">Infos pratiques</a></li>
+    </ul>
+
+    {% endblock %}
+
+    <div style="padding:20px;margin-top:30px;">
+
+    {% block content %}
+    {% endblock %}
+
+    </div>
+
+
+{% block footer %}
+        <footer>
+            <img
+                src = "{% static 'vitrine/img/logo-bd-mangaclub.png'%}"
+                height="100px"
+                width="100px"
+            />
+            <a href="https://www.facebook.com/bd.manga.7">
+            <img facebook
+                src = "{% static 'vitrine/img/logo_facebook.png' %}"
+                height="100px"
+                width="100px"
+            />
+            </a>
+
+            <a href="https://www.google.com/maps/place/Club+BD+Manga+INSA/@45.784273,4.8727513,17z/data=!3m1!4b1!4m5!3m4!1s0x47f4eaa0920c8b95:0xdcdfacf49dc62857!8m2!3d45.784273!4d4.87494">
+            <img maps
+                src = "{% static "vitrine/img/maps.png" %}"
+                 alt="Nous trouver"
+                height="100px"
+                width="100px"
+            />
+            </a>
+            <p Infos_pratiques>
+                <strong>Club BD Manga</strong><br>
+                MdE (bâtiment le Thélème)<br>
+                18 avenue des Arts<br>
+                69621 Villeurbanne cedex<br>
+                tél : + 33 (0)4 72 43 83 83<br>
+                fax : + 33 (0)4 72 43 85 00<br>
+                courriel : clubbdinsa@gmail.com
+            </p>
+            <p>
+                <a href="http://clubbdmanga.insa-lyon.org/content/mentions-legales" >
+                Mentions légales
+                </a>
+            </p>
+        </footer>
+    {% endblock %}
+
+</body>
+</html>

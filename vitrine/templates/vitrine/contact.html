@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>formulaire de contact</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block titreOnglet %} Contact {% endblock %}
+{% block content %}
     {% if envoi %}Votre message a bien été envoyé !{% endif %}
 
     {% if not envoi %}
@@ -14,5 +10,6 @@
         <input type="submit" value="Submit" />
     </form>
     {% endif %}
-</body>
-</html>
+{% endblock %}
+
+
