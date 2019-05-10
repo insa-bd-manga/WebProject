@@ -74,7 +74,7 @@ def actus(request, tag="", num_page=0):
 
     #Récupération des n articles avec le tag spécifié
     n = 10
-    query = Article.objects.filter(tag__nom_tag__icontains=tag).filter(date__lt=timezone.now).order_by("-date")[n*(num_page):n*(num_page+1)]
+    query = Article.objects.filter(tag__nom_tag__icontains=tag).filter(date__lt=timezone.now()).order_by("-date")[n*(num_page):n*(num_page+1)]
     return render(request, 'vitrine/actus.html', {"last_articles": query, "page" : num_page})
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
 
@@ -111,7 +111,7 @@ def festival(request, num_page=0):
 
     #Récupère les n articles qui ont le tag "festival" ou "concours", met en premier ceux qui sont épinglés, et trie ensuite par date
     n=10
-    query = Article.objects.filter(Q(tag="festival") | Q(tag="concours")).filter(date__lt=timezone.now).order_by("epingler", "-date")[n*(num_page):n*(num_page+1)]
+    query = Article.objects.filter(Q(tag="festival") | Q(tag="concours")).filter(date__lt=timezone.now()).order_by("epingler", "-date")[n*(num_page):n*(num_page+1)]
     return render(request, 'vitrine/festival.html', {"last_articles": query, "page": num_page})
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
 
@@ -135,7 +135,7 @@ def archives(request, tag="", year=timezone.now().year, month=timezone.now().mon
 
     # Récupération des n articles avec le tag et la date spécifiés
     n = 10
-    query = Article.objects.filter(date__year=year).filter(date__month=month).filter(tag__nom_tag__contains=tag).filter(date__lt=timezone.now).order_by("-date")[n * (num_page):n * (num_page + 1)]
+    query = Article.objects.filter(date__year=year).filter(date__month=month).filter(tag__nom_tag__icontains=tag).filter(date__lt=timezone.now()).order_by("-date")[n * (num_page):n * (num_page + 1)]
     return render(request, 'vitrine/actus.html', {"last_articles": query, "page": num_page})
 
 
