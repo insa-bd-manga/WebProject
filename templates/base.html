@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titreOnglet %}INSA BD/Manga {% endblock %}</title>
+
+  <!-- Custom styles for this template -->
+    {% load static %}
+    <link href="{% static 'vitrine/style.css'%}" rel="stylesheet">
+
+</head>
+<body>
+
+    {% block nav %}
+    <ul>
+        <li><a class="active" href="{% url "index" %}">Acceuil</a></li>
+        <li><a href="#actus">Actus</a></li>
+        <li><a href="#festival">Le festival</a></li>
+        <li><a href="#ouvrages">Nos Ouvrages</a></li>
+        <li><a href="{% url "contact" %}">Contact</a></li>
+        <li><a href="#archives">Archives</a></li>
+        <li><a href="{%  url "infos" %}">Infos pratiques</a></li>
+    </ul>
+
+    {% endblock %}
+
+    <div style="padding:20px;margin-top:30px;">
+
+    {% block content %}
+    {% endblock %}
+
+    </div>
+
+</body>
+</html>
