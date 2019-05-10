@@ -3,4 +3,5 @@ django-ckeditor==5.7.0
 django-js-asset==1.2.2
 pytz==2019.1
 sqlparse==0.3.0
+django-simple-captcha==0.5.11
 django-ckeditor==5.7.0

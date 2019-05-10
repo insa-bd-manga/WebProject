@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ckeditor',
-    'ckeditor_uploader',
+    'ckeditor',             # pour édition des articles en HTML
+    'ckeditor_uploader',    # pour l'upload des fichiers
+    'captcha',
     'vitrine',
 ]
 
@@ -135,4 +136,13 @@ CKEDITOR_CONFIGS = {
 }
 
 CKEDITOR_UPLOAD_PATH = "./static/ckeditor_uploads/"
+
+
+#Système de mailing
+EMAIL_HOST = "smtp-mail.outlook.com"
+EMAIL_HOST_USER = "clubbdinsa@outlook.fr"
+with open("passwords.txt", "r") as file:
+    EMAIL_HOST_PASSWORD = file.readline()
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
