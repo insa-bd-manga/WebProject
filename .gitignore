@@ -25,3 +25,8 @@ __pycache__/
 #passwords
 #----------------
 passwords.txt
+
+#----------------
+#database
+#----------------
+db.sqlite3
