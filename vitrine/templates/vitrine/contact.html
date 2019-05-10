@@ -7,10 +7,12 @@
 <body>
     {% if envoi %}Votre message a bien été envoyé !{% endif %}
 
+    {% if not envoi %}
     <form action="{% url "contact" %}" method="post">
         {% csrf_token %}<!--Permet de sécuriser le POST -->
         {{ form.as_p }}
         <input type="submit" value="Submit" />
     </form>
+    {% endif %}
 </body>
 </html>
