@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 #pour les modèles
 from vitrine.models import Article, Commentaire, Tag
@@ -14,7 +14,7 @@ from django.core.mail import send_mail
 from django.utils import timezone
 
 #pour les formulaires
-from .forms import ContactForm
+from .forms import ContactForm, CommentForm, RechercheForm
 
 
 def index(request):
@@ -27,8 +27,8 @@ def index(request):
 
     :return paquet http contenant la page"""
 
-    # récupération des 3 derniers articles
-    query = Article.objects.all().order_by("-date")[:3]
+    # récupération des 3 derniers articles en date
+    query = Article.objects.all().filter(date__lt=timezone.now()).order_by("-date")[:3]
 
     return render(request, 'vitrine/index.html', {"last_articles": query})
 
@@ -82,24 +82,41 @@ def actus(request, tag="", num_page=0):
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
 
 
-def article(request, id_article=1, num_commentaire=0):
+def article(request, id_article=1, page_commentaire=0):
     """page d'un article sépicifique, avec les commentaires en dessous
 
     page composée de l'article avec l'id_article donné, et des commentaires qui y sont liées, triées par date de publication
 
     :param request : OSEF
     :param id_article : l'id de l'article à afficher
-    :param num_commentaire : La page a afficher, définit l'ancienneté des commentaires qu'on va afficher; les n premiers, puis les n suivants, etc
+    :param page_commentaire : La page a afficher, définit l'ancienneté des commentaires qu'on va afficher; les n premiers, puis les n suivants, etc
     :type request : requête HTTP
     :type id_article : int
-    :type num_commentaire : int
+    :type page_commentaire : int
 
     :return paquet http contenant la page"""
 
-    article=get_object_or_404(Article, id=id_article)
-    n=10
-    query = Commentaire.objects.filter(id_article=id_article).order_by("-date")[n*(num_commentaire):n*(num_commentaire+1)]
-    return render(request, 'vitrine/article.html', {"article": article, "commentaires": query, "page": num_commentaire})
+    # acquisition de l'article
+    article = get_object_or_404(Article, id=id_article)
+    # acquisition des 10 derniers commentaires
+    n = 10
+    commentaires = Commentaire.objects.filter(id_article=id_article).order_by("-date")[n*(page_commentaire):n*(page_commentaire+1)]
+
+    # formulaire de commentaire
+    envoi = False
+
+    form = CommentForm(request.POST or None)
+    if form.is_valid():
+        new_com = Commentaire()
+        new_com.id_article = article
+        new_com.sujet = form.cleaned_data['sujet']
+        new_com.contenu = form.cleaned_data['message']
+        new_com.save()
+
+        # si envoie réussi
+        envoi = True
+
+    return render(request, 'vitrine/article.html', locals())
 
 
 def festival(request, num_page=0):
@@ -113,7 +130,7 @@ def festival(request, num_page=0):
         :return paquet http contenant la page"""
 
     #Récupère les n articles qui ont le tag "festival" ou "concours", met en premier ceux qui sont épinglés, et trie ensuite par date
-    n=10
+    n = 10
     query = Article.objects.filter(Q(tag="festival") | Q(tag="concours")).filter(date__lt=timezone.now()).order_by("epingler", "-date")[n*(num_page):n*(num_page+1)]
     return render(request, 'vitrine/festival.html', {"last_articles": query, "page": num_page})
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
@@ -139,7 +156,14 @@ def archives(request, tag="", year=timezone.now().year, month=timezone.now().mon
     # Récupération des n articles avec le tag et la date spécifiés
     n = 10
     query = Article.objects.filter(date__year=year).filter(date__month=month).filter(tag__nom_tag__icontains=tag).filter(date__lt=timezone.now()).order_by("-date")[n * (num_page):n * (num_page + 1)]
-    return render(request, 'vitrine/actus.html', {"last_articles": query, "page": num_page})
+
+    #formulaire de choix des critères de recherche
+    form = RechercheForm(request.POST or None)
+    if form.is_valid():
+        tag = form.cleaned_data['tag']
+        return redirect("archives/{}/{}/{}/{}")
+
+    return render(request, 'vitrine/archives.html', {"last_articles": query, "page": num_page})
 
 
 def infos(request):
