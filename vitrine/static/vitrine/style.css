@@ -30,3 +30,103 @@ li a:hover:not(.active) {
 .active {
   background-color: #4CAF50;
 }
+
+
+/* Footer */
+
+.footer-content{
+	background-color: #393939;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font-family: 'Montserrat Light', arial;
+	padding: 20px 20px;
+	margin-top: 50px;
+}
+
+.footer-content .footer-left,
+.footer-content .footer-center,
+.footer-content .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+.footer-content .footer-left{
+	width: 10%;
+}
+
+.footer-content .footer-left img {
+  vertical-align: central;
+  text-align: center;
+}
+
+.footer-content .footer-left a{
+	color:  #ffffff;
+    text-align: center;
+	padding: 0;
+}
+
+
+/* Footer Center */
+.footer-content .footer-center{
+	width: 30%;
+    margin-left: 5%;
+}
+
+
+.footer-content .footer-center i{
+	background-color: #646464;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	vertical-align: 0%;
+}
+
+
+.footer-content .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin-top: 10px;
+}
+
+/* Footer Right */
+.footer-content .footer-right{
+	width: 40%;
+}
+
+.footer-content .footer-right #map-container {
+    height: 240px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Pour que le footer soit responsive */
+
+@media (max-width: 1000px) {
+
+	.footer-content{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-content .footer-left,
+	.footer-content .footer-center,
+	.footer-content .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.footer-content .footer-center i{
+		margin-left: 0;
+	}
+
+}
