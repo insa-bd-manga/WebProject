@@ -1,6 +1,31 @@
 {% extends "base.html" %}
 {% block titreOnglet %} Article {% endblock %}
 {% block content %}
-    ARTICLE
+    <!-ARTICLE-->
+    {{ article.titre }}
+    {{ article.contenu|safe }}
+
+
+    <!--COMMENTAIRES -->
+    <h1>Commentaires</h1>
+    {% for com in commentaires %}
+        <p>publié le : {{ com.date }}</p>
+        <p>{{ com.contenu }}</p>
+        <br>
+    {% endfor %}
+    <!--#TODO: ajouter un long scroll pour afficher les 10 com suivants-->
+
+
+    <!-FORMULAIRE DE COMMENTAIRE-->
+    {% if envoi %}Votre commentaire a bien été envoyé !{% endif %}
+
+    {% if not envoi %}
+    <form action="{% url "article" id_article page_commentaire %}" method="post">
+        {% csrf_token %}<!--Permet de sécuriser le POST -->
+        {{ form.as_p }}
+        <input type="submit" value="envoyer" />
+    </form>
+    {% endif %}
+
 {% endblock %}
 

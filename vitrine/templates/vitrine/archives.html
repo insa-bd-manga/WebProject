@@ -1,0 +1,7 @@
+<form action="{% url "archives" %}" method="post">
+        {% csrf_token %}<!--Permet de sécuriser le POST -->
+        {{ form_tag.as_p }}
+        {{ form_article.as_p }}
+        {{ form.as_p }}
+        <input type="submit" value="envoyer" />
+</form>

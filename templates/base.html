@@ -7,6 +7,8 @@
   <!-- Custom styles for this template -->
     {% load static %}
     <link href="{% static 'vitrine/style.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fr.allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -33,44 +35,58 @@
 
 
 {% block footer %}
-        <footer>
+    <footer class="footer-content">
+        <div class="footer-left">
+            <div>
             <img
                 src = "{% static 'vitrine/img/logo-bd-mangaclub.png'%}"
                 height="100px"
                 width="100px"
             />
-            <a href="https://www.facebook.com/bd.manga.7">
-            <img facebook
-                src = "{% static 'vitrine/img/logo_facebook.png' %}"
-                height="100px"
-                width="100px"
-            />
-            </a>
+            </div>
+            <div>
+                <p>
+                    <a href="http://clubbdmanga.insa-lyon.org/content/mentions-legales" >
+                    Mentions légales
+                    </a>
+                </p>
+            </div>
+        </div>
 
-            <a href="https://www.google.com/maps/place/Club+BD+Manga+INSA/@45.784273,4.8727513,17z/data=!3m1!4b1!4m5!3m4!1s0x47f4eaa0920c8b95:0xdcdfacf49dc62857!8m2!3d45.784273!4d4.87494">
-            <img maps
-                src = "{% static "vitrine/img/maps.png" %}"
-                 alt="Nous trouver"
-                height="100px"
-                width="100px"
-            />
-            </a>
-            <p Infos_pratiques>
-                <strong>Club BD Manga</strong><br>
-                MdE (bâtiment le Thélème)<br>
-                18 avenue des Arts<br>
-                69621 Villeurbanne cedex<br>
-                tél : + 33 (0)4 72 43 83 83<br>
-                fax : + 33 (0)4 72 43 85 00<br>
-                courriel : clubbdinsa@gmail.com
-            </p>
-            <p>
-                <a href="http://clubbdmanga.insa-lyon.org/content/mentions-legales" >
-                Mentions légales
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>MdE (bâtiment le Thélème)<br>
+                    18 avenue des Arts<br>
+                    69621 Villeurbanne cedex<br>
+                </p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>tél : + 33 (0)4 72 43 83 83<br>
+                    fax : + 33 (0)4 72 43 85 00<br>
+                </p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>clubbdinsa@gmail.com</p>
+            </div>
+
+            <div>
+                <i class="fa fa-facebook"></i>
+                <a href="https://www.facebook.com/bd.manga.7">
+                    <p>Page Facebook</p>
                 </a>
-            </p>
-        </footer>
-    {% endblock %}
+            </div>
+        </div>
+        <!-- Ici Google Maps. -->
+        <div class="footer-right">
+            <iframe id=map-container src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.3471255738314!2d4.872751315441652!3d45.78427297910615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eaa0920c8b95%3A0xdcdfacf49dc62857!2sClub+BD+Manga+INSA!5e0!3m2!1sfr!2sfr!4v1557589338729!5m2!1sfr!2sfr" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </footer>
+{% endblock %}
 
 </body>
 </html>
