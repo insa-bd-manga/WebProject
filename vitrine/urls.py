@@ -20,13 +20,15 @@ urlpatterns = [
     path('festival/<int:num_page>', views.festival, name='festival'),
     path('festival', views.festival, name='festival'),
 
-    path('archives/<str:tag>/<int:year>/<int:month>/<int:num_page>', views.archives, name='archives'),
+
+
+    # path('archives/<str:tag>/<int:year>/<int:month>/<int:num_page>', views.archives, name='archives'),
     # path('archives/<str:tag>/<int:year>', views.archives, name='archives'),
     # path('archives/<int:year>/<int:month>', views.archives, name='archives'),
     # path('archives/<int:year>', views.archives, name='archives'),
     # path('archives/<int:month>', views.archives, name='archives'),
     # path('archives/<str:tag>', views.archives, name='archives'),
-    # path('archives', views.archives, name='archives'),
+    path('archives', views.archives, name='archives'),
     # path('archives/<str:tag>/<int:year>/<int:num_page>', views.archives, name='archives'),
     # path('archives/<int:year>/<int:month>/<int:num_page>', views.archives, name='archives'),
     # path('archives/<int:year>/<int:num_page>', views.archives, name='archives'),

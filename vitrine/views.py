@@ -136,7 +136,7 @@ def festival(request, num_page=0):
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
 
 
-def archives(request, tag="", year=timezone.now().year, month=timezone.now().month, num_page=0):
+def archives(request):
     """La page archive affiche les articles du site triées par tag/date
 
         :param request : OSEF
@@ -153,17 +153,35 @@ def archives(request, tag="", year=timezone.now().year, month=timezone.now().mon
 
         :return paquet http contenant la page"""
 
+    # déclaration initiale des variables
+    tag = "actu"
+    year = timezone.now().year
+    month = timezone.now().month
+    num_page = 0
+
+    # Récupération des paramètres
+    # tag = request.GET['tag']
+    # year = request.GET['year']
+    # month = request.GET['month']
+    # num_page = request.GET['num_page']
+
     # Récupération des n articles avec le tag et la date spécifiés
     n = 10
     query = Article.objects.filter(date__year=year).filter(date__month=month).filter(tag__nom_tag__icontains=tag).filter(date__lt=timezone.now()).order_by("-date")[n * (num_page):n * (num_page + 1)]
 
     #formulaire de choix des critères de recherche
+    # form_tag = TagForm(request.POST or None)
+    # form_article = ArticleForm(request.POST or None)
+    # if form_tag.is_valid():
+    #     tag = form_tag.cleaned_data['nom_tag']
+    #     date = form_article.cleaned_data['date']
+    #     return redirect("archives?tag={}?date={}".format(tag, date))
     form = RechercheForm(request.POST or None)
     if form.is_valid():
-        tag = form.cleaned_data['tag']
-        return redirect("archives/{}/{}/{}/{}")
+        tag = form.cleaned_data['nom_tag']
+        date = form.cleaned_data['date']
 
-    return render(request, 'vitrine/archives.html', {"last_articles": query, "page": num_page})
+    return render(request, 'vitrine/archives.html', locals())
 
 
 def infos(request):
