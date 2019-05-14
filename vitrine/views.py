@@ -109,7 +109,6 @@ def article(request, id_article=1, page_commentaire=0):
     if form.is_valid():
         new_com = Commentaire()
         new_com.id_article = article
-        new_com.sujet = form.cleaned_data['sujet']
         new_com.contenu = form.cleaned_data['message']
         new_com.save()
 
