@@ -9,6 +9,8 @@
     <link href="{% static 'vitrine/style.css'%}" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fr.allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
+    <link href="http://fr.allfont.net/allfont.css?fonts=montserrat-bold" rel="stylesheet" type="text/css" />
+    {% block styleSup %}{% endblock %}
 
 </head>
 <body>
@@ -26,7 +28,7 @@
 
     {% endblock %}
 
-    <div style="padding:20px;margin-top:30px;">
+    <div style="margin-top:30px;">
 
     {% block content %}
     {% endblock %}

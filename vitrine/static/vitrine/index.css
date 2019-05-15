@@ -1,0 +1,135 @@
+@font-face {
+	font-family: "Sonic Comics";
+	src: url('font/sonic_comic.ttf');
+}
+
+@font-face {
+	font-family: "Suplexmentary_Comic";
+	src: url('font/Suplexmentary_Comic_NC.ttf');
+}
+
+@font-face {
+	font-family: "Coyotris_Comic";
+	src: url('font/Coyotris_Comic.ttf');
+}
+
+body {
+	background-color: #f1f1f1;
+}
+
+.entete-content.img {
+	padding: 0px;
+    width:100%;
+}
+
+.entete-content {
+    background-image: url('livres_rogner.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    height: 400px;
+}
+
+
+.entete-content h3 {
+    z-index: 1;
+	position: relative;
+    top: 120px;
+    left: 150px;
+    font-family: "Suplexmentary_Comic";
+    color: #ffffff;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px #777777;
+
+}
+
+.lesArticles{
+	background-color: #ffffff;
+    margin-top: 30px;
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.titre-actu {
+    font-family: "Sonic Comics";
+    text-align: center;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+
+
+}
+
+.lesArticles > a, .plus-articles > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.lesArticles > a:focus, .lesArticles > a:hover, .plus-articles > a:focus, .plus-articles > a:hover {
+    text-decoration: none;
+    color: #de7328;
+}
+
+
+.lesArticles .titre-article {
+    font-size: 40px;
+    font-family: "Suplexmentary_Comic";
+    text-transform: capitalize;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+.lesArticles > div {
+  font-family: "Suplexmentary_Comic";
+  font-size: 18px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.article-infos{
+    font-size: 12px;
+    font-family: 'Montserrat Light', arial;
+    font-style: italic;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: #868e96;
+}
+
+.hr{
+  margin-top: 1rem;
+  margin-botton: 1rem;
+  border:0;
+  border-top-color: rgba(0, 0, 0, 0.1);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: initial;
+  border-right-style: initial;
+  border-right-width: 0px;
+  border-bottom-color: initial;
+  border-bottom-style: initial;
+  border-bottom-width: 0px;
+  border-left-color: initial;
+  border-left-style: initial;
+  border-left-width: 0px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-top: 1px solid rgba(0,0,0,.1);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+
