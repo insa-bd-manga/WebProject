@@ -1,31 +1,42 @@
 {% extends "base.html" %}
+
 {% block titreOnglet %} Article {% endblock %}
+{% load static %}
+{% block styleSup %}
+    <link href="{% static 'vitrine/article.css'%}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
     <!-ARTICLE-->
-    {{ article.titre }}
-    {{ article.contenu|safe }}
+    <div class="mon_article">
+        <h3 class="titre-article">{{ article.titre }}</h3>
+        <p class="article-infos">Publié par {{ article.auteur }}. Le {{ article.date }}</p>
+        <p class="contenu-article"><div>{{ article.contenu|safe }}</div></p>
+    </div>
+
+    <div class="commentaire">
+        <!--COMMENTAIRES -->
+        <h1>Commentaires</h1>
+        {% for com in commentaires %}
+            <p>publié le : {{ com.date }}</p>
+            <p>{{ com.contenu }}</p>
+            <br>
+        {% endfor %}
+        <!--#TODO: ajouter un long scroll pour afficher les 10 com suivants-->
 
 
-    <!--COMMENTAIRES -->
-    <h1>Commentaires</h1>
-    {% for com in commentaires %}
-        <p>publié le : {{ com.date }}</p>
-        <p>{{ com.contenu }}</p>
-        <br>
-    {% endfor %}
-    <!--#TODO: ajouter un long scroll pour afficher les 10 com suivants-->
+        <!-FORMULAIRE DE COMMENTAIRE-->
+        {% if envoi %}Votre commentaire a bien été envoyé !{% endif %}
 
+        {% if not envoi %}
+        <form action="{% url "article" id_article page_commentaire %}" method="post">
+            {% csrf_token %}<!--Permet de sécuriser le POST -->
+            {{ form.as_p }}
+            <input type="submit" value="envoyer" />
+        </form>
+        {% endif %}
 
-    <!-FORMULAIRE DE COMMENTAIRE-->
-    {% if envoi %}Votre commentaire a bien été envoyé !{% endif %}
-
-    {% if not envoi %}
-    <form action="{% url "article" id_article page_commentaire %}" method="post">
-        {% csrf_token %}<!--Permet de sécuriser le POST -->
-        {{ form.as_p }}
-        <input type="submit" value="envoyer" />
-    </form>
-    {% endif %}
+</div>
 
 {% endblock %}
 

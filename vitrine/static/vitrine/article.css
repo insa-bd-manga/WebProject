@@ -1,0 +1,49 @@
+@font-face {
+	font-family: "Sonic Comics";
+	src: url('font/sonic_comic.ttf');
+}
+
+@font-face {
+	font-family: "Suplexmentary_Comic";
+	src: url('font/Suplexmentary_Comic_NC.ttf');
+}
+
+
+.mon_article{
+	background-color: #ffffff;
+    margin-top: 70px;
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.titre-article {
+    font-size: 40px;
+    font-family: "Suplexmentary_Comic";
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.article-infos{
+    font-size: 12px;
+    font-family: 'Montserrat Light', arial;
+    font-style: italic;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #868e96;
+}
+
+.mon_article > div {
+  font-family: "Suplexmentary_Comic";
+  font-size: 18px;
+    text-align: justify;
+  margin-top:20px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
