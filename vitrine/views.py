@@ -80,7 +80,8 @@ def actus(request, tag="", num_page=0):
     n = 10
     query = Article.objects.filter(tag__nom_tag__icontains=tag).filter(date__lt=timezone.now()).order_by("-date")
     nbr_articles = len(query)
-    pages_necessaires = floor(((nbr_articles-0.000001)/10)) #nombre de pages necessaire pour afficher tout les articles -1 du à l'indexation conmmencant à 0
+    pages_necessaires = ceil((nbr_articles/10))-1 #nombre de pages necessaire pour afficher tout les articles -1 du à l'indexation commencant à 0
+
     query = query[n * (num_page):n * (num_page + 1)]
     return render(request, 'vitrine/actus.html', {"last_articles": query, "page" : num_page, "tag": tag, "nbr_articles":nbr_articles,"pages_necess":pages_necessaires})
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
