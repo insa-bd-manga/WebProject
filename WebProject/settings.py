@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',    # pour l'upload des fichiers
     'captcha',
     'vitrine',
+    'bibliotheque'
 ]
 
 MIDDLEWARE = [
