@@ -78,7 +78,7 @@ def actus(request, tag="", num_page=0):
     #Récupération des n articles avec le tag spécifié
     n = 10
     query = Article.objects.filter(tag__nom_tag__icontains=tag).filter(date__lt=timezone.now()).order_by("-date")[n*(num_page):n*(num_page+1)]
-    return render(request, 'vitrine/actus.html', {"last_articles": query, "page" : num_page})
+    return render(request, 'vitrine/actus.html', {"last_articles": query, "page" : num_page, "tag": tag})
     #/!\ définition valide pour des affichages page par page, mais apparement aussi pour de l'infinite scroll (cf : https://infinite-scroll.com/)
 
 

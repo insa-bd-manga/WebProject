@@ -1,6 +1,59 @@
 {% extends "base.html" %}
 {% block titreOnglet %} Actus {% endblock %}
+{%  load static %}
+{% block styleSup %}<link href="{% static 'vitrine/actus.css' %}" rel="stylesheet"> {% endblock  %}
 {% block content %}
-    Actus
+
+
+    <h3>Les Actus</h3>
+
+
+    Trier les articles par :
+
+    <a href="{% url "actus" "divers" %}">Divers</a>,
+    <a href="{% url "actus" "actu" %}">Actus</a>,
+    <a href="{% url "actus" "festival" %}">Festival</a>,
+    <a href="{% url "actus" "chronique" %}">Chronique</a>,
+    <a href="{% url "actus" "concours BD" %}">Concours BD</a>
+    <br/>
+    <br/>
+
+
+    {% for article in last_articles %}
+        <div class= "articles"> <a href="/article/{{ article.id }}"><h3>{{ article.titre|safe }}</h3>
+            <p>{{ article.contenu|safe|truncatewords:80 }}</p></a></div>
+    {% endfor %}
+
+    {#  Début de la partie qui Sert à naviguer entre les pages #}
+    {% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
+
+    <a id="next_page" href="">Page suivante</a>
+
+    <script type="text/javascript">
+        var page_suivante = document.getElementById('next_page');
+        var page_precedente = document.getElementById('previous_page');
+
+        var num_page_suivante;
+        var num_page_precedente;
+        var tag_page =0 ;
+         if ("{{ tag }}" != ""){
+             tag_page = "{{ tag }}" + "/";
+         }
+         else {
+             tag_page = "{{ tag }}";
+         }
+
+        num_page_suivante = {{ page }} +1;
+        num_page_precedente = {{ page }} -1;
+
+
+
+        page_suivante.href="/actus/"+tag_page+num_page_suivante;
+        page_precedente.href="/actus/"+tag_page+num_page_precedente;
+
+
+    </script>
+    {#  Fin de la partie qui Sert à naviguer entre les pages #}
+
 {% endblock %}
 
