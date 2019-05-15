@@ -25,13 +25,35 @@
     {% endfor %}
 
     {#  Début de la partie qui Sert à naviguer entre les pages #}
-    {% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
+    <div class="pages">{% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
+        <span id="nb_pages"></span>
+        {% if page < pages_necess  %}<a id="next_page" href="">Page suivante</a></div> {% endif %}
 
-    <a id="next_page" href="">Page suivante</a>
+
 
     <script type="text/javascript">
         var page_suivante = document.getElementById('next_page');
         var page_precedente = document.getElementById('previous_page');
+        var nbr_pages = document.getElementById("nb_pages");
+
+
+        var text = '<span> ';
+        var nb_pages_necessaire = ((({{ nbr_articles }})/10)+1) ;
+        for(var i=1;i<nb_pages_necessaire; i++) {
+
+            if ("{{ tag }}" == ""){
+                text += " <a href='/actus/" +(i-1)+"' > " + i + " </a>";
+            }
+            else {
+                text += "<a href='/actus/{{ tag }}/"+(i-1)+"'>" + i + " </a> ";
+            }
+
+
+
+        }
+
+        text+='</span>';
+        nbr_pages.innerHTML = text;
 
         var num_page_suivante;
         var num_page_precedente;
@@ -46,11 +68,14 @@
         num_page_suivante = {{ page }} +1;
         num_page_precedente = {{ page }} -1;
 
+        if (page_suivante != null){
+            page_suivante.href = "/actus/" + tag_page + num_page_suivante;
+        }
 
 
-        page_suivante.href="/actus/"+tag_page+num_page_suivante;
-        page_precedente.href="/actus/"+tag_page+num_page_precedente;
-
+        if (page_precedente!=null){
+            page_precedente.href="/actus/"+tag_page+num_page_precedente;
+        }
 
     </script>
     {#  Fin de la partie qui Sert à naviguer entre les pages #}
