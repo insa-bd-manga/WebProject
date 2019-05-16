@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: 'Merriweather', sans-serif;
+  padding: 1em;
+}
+
+h1 {
+  text-align: center;
+  color: #a8a8a8;
+  text-shadow: 1px 1px 0 white;
+}
+.position_captcha .captcha {
+  position: relative;
+  float: left;
+}
+.position_captcha input #id_captcha_1{
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 12px;
+  float:right;
+}
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.helptext{
+  font-family: 'Merriweather', sans-serif;
+  font-size: small;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #e1ddee;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #cacccb;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #22f34b;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+form input, form textarea{
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Merriweather', sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+
+form input:focus, form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+form #input-submit {
+  color: white;
+  background: #22f34b;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+.position_captcha .captcha {
+  position: relative;
+  float: left;
+}
+.position_captcha input #id_captcha_1{
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 12px;
+  float:right;
+}
+

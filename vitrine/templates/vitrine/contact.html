@@ -1,14 +1,34 @@
 {% extends "base.html" %}
 {% block titreOnglet %} Contact {% endblock %}
+{%  block styleSup %}
+    {% load static %}
+    <link href="{% static 'vitrine/contactez_nous.css'%}" rel="stylesheet"> {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" type="text/css" />
+
 {% block content %}
     {% if envoi %}Votre message a bien été envoyé !{% endif %}
 
     {% if not envoi %}
+    <h1>Contactez nous</h1>
     <form action="{% url "contact" %}" method="post">
         {% csrf_token %}<!--Permet de sécuriser le POST -->
-        {{ form.as_p }}
-        <input type="submit" value="Submit" />
+
+        <div class="half left cf">
+            <p><input id="id_sujet" type="text" name="sujet" maxlength="100" placeholder="Sujet"/></p>
+            <p><input type="text" name="envoyeur" id="id_envoyeur" placeholder="Mail" /></p>
+            <label class="container">
+              <input type="checkbox" name="renvoi" id="id_renvoi" checked="checked">
+              <span class="checkmark"></span>
+              <span class="helptext"> Je souhaite recevoir une copie du mail envoyé.</span>
+            </label>
+        </div>
+        <div class="half right cf">
+            <p><textarea id="id_message" rows="10" cols="40" name="message" placeholder="Message"></textarea></p>
+            <p class="position_captcha">{{ form.captcha}}</p>
+        </div>
+        <input type="submit" value="Envoyer" id="input-submit" />
     </form>
+
     {% endif %}
 {% endblock %}
 
