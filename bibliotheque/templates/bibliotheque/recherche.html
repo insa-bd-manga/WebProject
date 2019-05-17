@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TESTPAGE</title>
-</head>
-<body>
+<form action="{% url "recherche" num_page%}" method="post">
+        {% csrf_token %}<!--Permet de sécuriser le POST -->
+        {{ form.as_p }}
+        <input type="submit" value="envoyer" />
 
-{% if envoi %}Works{% endif %}
-
-<form action="{% url "recherche" %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
 </form>
-<p> {{ query }} </p>
 
-</body>
-</html>
+<h1>Critères choisis</h1>
+<li>auteur : {{ auteur|default:"tous les auteurs" }}</li>
+<li>genre : {{ genre|default:"tous les genres" }}</li>
+<li>titre : {{ titre|default:"tous les titres" }}</li>
+
+<h1>livres en sortie</h1>
+{% for livre in query %}
+    <p>{{ livre.title }}, par {{ livre.id.first.name }}</p>
+
+{% empty %}
+    <p>Aucun livre trouvé</p>
+
+{% endfor %}
