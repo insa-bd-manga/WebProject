@@ -68,7 +68,8 @@ class Book(models.Model):
     ean = models.CharField(max_length=13, null=True)
     editor = models.ForeignKey(Editor, on_delete=models.PROTECT, null=True) #Même chose, editor_id
     buy_date = models.DateTimeField(default=timezone.now, null=True)
-    reference = models.CharField(max_length=10, unique=True, null=False)
+    reference = models.CharField(primary_key=True, max_length=10, unique=True, null=False)
+    #kind : m pour manga, b pour BD
     kind = models.CharField(max_length=1, null=False)
     user_id = models.ForeignKey(User, on_delete=models.PROTECT, null=True) #Même chose
     date_start = models.DateTimeField(default=timezone.now, null=True)
