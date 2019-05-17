@@ -1,18 +1,3 @@
-@font-face {
-	font-family: "Sonic Comics";
-	src: url('font/sonic_comic.ttf');
-}
-
-@font-face {
-	font-family: "Suplexmentary_Comic";
-	src: url('font/Suplexmentary_Comic_NC.ttf');
-}
-
-@font-face {
-	font-family: "Coyotris_Comic";
-	src: url('font/Coyotris_Comic.ttf');
-}
-
 body {
 	background-color: #f1f1f1;
 }
@@ -35,7 +20,7 @@ body {
 	position: relative;
     top: 120px;
     left: 150px;
-    font-family: "Suplexmentary_Comic";
+    font-family: 'Montserrat Bold', arial;
     color: #ffffff;
     font-size: 35px;
     text-shadow: 2px 2px 2px #777777;
@@ -56,7 +41,7 @@ body {
 }
 
 .titre-actu {
-    font-family: "Sonic Comics";
+    font-family: 'Montserrat Black', arial;
     text-align: center;
     font-size: 60px;
     margin-top: 10px;
@@ -79,7 +64,7 @@ body {
 
 .lesArticles .titre-article {
     font-size: 40px;
-    font-family: "Suplexmentary_Comic";
+    font-family: 'Montserrat Bold', arial;
     text-transform: capitalize;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -87,7 +72,7 @@ body {
 
 
 .lesArticles > div {
-  font-family: "Suplexmentary_Comic";
+  font-family: 'Montserrat', arial;
   font-size: 18px;
   margin-top:10px;
   margin-bottom: 10px;
