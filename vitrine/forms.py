@@ -19,33 +19,16 @@ class CommentForm(forms.Form):
 class RechercheForm(forms.Form):
     # https://docs.djangoproject.com/fr/2.2/ref/models/fields/#field-choices
 
+    #consitution des listes de choix
     choix_tags = Tag.objects.all()
-    choix_mois = Article.objects.all() #trouver requête qui donne les mois des articles
-    choix_annees = Article.objects.all() # Pareil!
 
-    tag = forms.ModelChoiceField(choix_tags, label="choix du tag")
-    mois = forms.ModelChoiceField(choix_mois, label="choix du mois")
-    annee = forms.ModelChoiceField(choix_annees, label="choix de l'année")
+    choix_mois = Article.objects.values_list('date__month', flat=True).order_by('date__month').distinct()
+    choix_mois = [(m, m) for m in choix_mois]
 
+    choix_annees = Article.objects.values_list('date__year', flat=True).order_by('date__year').distinct()
+    choix_annees = [(a, a) for a in choix_annees]
 
-# class TagForm(forms.ModelForm):
-#     class Meta:
-#         CHOICES = Tag.objects.all()
-#
-#         model = Tag
-#         fields = ('nom_tag',)
-#         widgets = {
-#             'nom_tag': Select(choices=((x.nom_tag, x.nom_tag) for x in CHOICES)),
-#         }
-#
-#
-#
-# class ArticleForm(forms.ModelForm):
-#     class Meta:
-#         CHOICES = Article.objects.all()
-#
-#         model = Article
-#         fields = ('date',)
-#         widgets = {
-#             'date': Select(choices=((a.date, a.date.year) for a in CHOICES)),
-#         }
+    #les formulaires
+    tag = forms.ModelChoiceField(choix_tags, label="choix du tag", required=False)
+    mois = forms.ChoiceField(choices=choix_mois, label="choix du mois", required=False)
+    annee = forms.ChoiceField(choices=choix_annees, label="choix de l'année", required=False)
