@@ -1,7 +1,17 @@
-<form action="{% url "archives" %}" method="post">
+<form action="{% url "archives" num_page%}" method="post">
         {% csrf_token %}<!--Permet de sécuriser le POST -->
-        {{ form_tag.as_p }}
-        {{ form_article.as_p }}
         {{ form.as_p }}
         <input type="submit" value="envoyer" />
+
 </form>
+
+<h1>Critères choisis</h1>
+<li>tag : {{ tag|default:"tous les tags" }}</li>
+<li>année : {{ annee|default:"toutes les années" }}</li>
+<li>mois : {{ mois|default:"tous les mois" }}</li>
+
+<h1>articles en sortie</h1>
+{% for article in query %}
+    <p>{{ article.titre }}, publié le {{ article.date }}, avec le(s) tag(s) : {{ article.get_tag }}</p>
+
+{% endfor %}
