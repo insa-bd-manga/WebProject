@@ -9,7 +9,7 @@
     <link href="{% static 'vitrine/style.css'%}" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fr.allfont.net/allfont.css?fonts=montserrat-light" rel="stylesheet" type="text/css" />
-    {% block styleSup %}  {%  endblock %}
+    {% block styleSup %} {% endblock  %}
 
 </head>
 <body>
@@ -17,7 +17,7 @@
     {% block nav %}
     <ul>
         <li><a class="active" href="{% url "index" %}">Acceuil</a></li>
-        <li><a href="#actus">Actus</a></li>
+        <li><a href="{% url "actus" %}">Actus</a></li>
         <li><a href="#festival">Le festival</a></li>
         <li><a href="#ouvrages">Nos Ouvrages</a></li>
         <li><a href="{% url "contact" %}">Contact</a></li>

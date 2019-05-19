@@ -9,8 +9,8 @@ urlpatterns = [
 #   path('ouvrage/<str:auteur>/<str:titre>/<int:num_page>', views.ouvrage, name='ouvrage'),
 
     path('actus/<str:tag>/<int:num_page>', views.actus, name='actus'),
-    path('actus/<str:tag>', views.actus, name='actus'),
     path('actus/<int:num_page>', views.actus, name='actus'),
+    path('actus/<str:tag>', views.actus, name='actus'),
     path('actus/', views.actus, name='actus'),
 
     path('article/<int:id_article>/<int:page_commentaire>', views.article, name='article'),
