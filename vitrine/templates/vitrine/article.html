@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block titreOnglet %} Article {% endblock %}
+{%  block styleSup %}
+    {% load static %}
+    <link href="{% static 'vitrine/commentaire.css'%}" rel="stylesheet"> {% endblock %}
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" type="text/css" />
+
 {% block content %}
     <!-ARTICLE-->
     {{ article.titre }}
@@ -8,24 +14,70 @@
 
     <!--COMMENTAIRES -->
     <h1>Commentaires</h1>
-    {% for com in commentaires %}
-        <p>publié le : {{ com.date }}</p>
-        <p>{{ com.contenu }}</p>
-        <br>
-    {% endfor %}
+    <div class="corps">
+        {% for com in commentaires %}
+            <form>
+                <label class="message_sent">
+                    <label class="haut_mes">
+                        publié le : {{ com.date }}
+                        <br>
+                    </label>
+                    <label class="bas_mes">{{ com.contenu }}</label>
+                </label>
+            </form>
+        {% endfor %}
+    </div>
     <!--#TODO: ajouter un long scroll pour afficher les 10 com suivants-->
 
 
     <!-FORMULAIRE DE COMMENTAIRE-->
-    {% if envoi %}Votre commentaire a bien été envoyé !{% endif %}
 
-    {% if not envoi %}
+    {% if envoi %}
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong> Super ! </strong> Votre commentaire a bien été envoyé !
+    </div>
+
     <form action="{% url "article" id_article page_commentaire %}" method="post">
         {% csrf_token %}<!--Permet de sécuriser le POST -->
-        {{ form.as_p }}
-        <input type="submit" value="envoyer" />
+        <div class="cat_message">
+            <label for="id_message">Message&nbsp;</label>
+        </div>
+        <textarea name="message" cols="40" rows="10" required="" id="id_message" placeholder="Ecrivez votre commentaire"></textarea>
+        <div class="position_captcha">
+            {{ form.captcha }}
+        </div>
+
+        <input type="submit" value="Envoyer" id="input-submit"/>
     </form>
+
     {% endif %}
 
+    {% if not envoi %}
+
+    <form action="{% url "article" id_article page_commentaire %}" method="post">
+        {% csrf_token %}<!--Permet de sécuriser le POST -->
+        <div class="cat_message">
+            <label for="id_message">Message&nbsp;</label>
+        </div>
+        <textarea name="message" cols="40" rows="10" required="" id="id_message" placeholder="Ecrivez votre commentaire"></textarea>
+        <div class="position_captcha">
+            {{ form.captcha }}
+        </div>
+
+        <input type="submit" value="Envoyer" id="input-submit"/>
+    </form>
+
+
+    {% endif %}
+
+
+
+    {#kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk#}
+
+
+
+
 {% endblock %}
+
 
