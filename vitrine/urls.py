@@ -17,8 +17,9 @@ urlpatterns = [
     path('article/<int:id_article>', views.article, name='article'),
     path('article', views.article, name='article'),
 
-    path('festival/<int:num_page>', views.festival, name='festival'),
     path('festival', views.festival, name='festival'),
+    path('festival/<int:num_page>', views.festival, name='festival'),
+
 
 
 
