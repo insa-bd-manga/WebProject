@@ -1,7 +1,10 @@
-body {margin:0;
-	background-color: #f1f1f1;}
+body {
+	margin:0;
+	background-color: #f1f1f1;
+}
 
 ul {
+	z-index: 1;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -25,12 +28,13 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+	background-color: #111;
 }
 
 .active {
   background-color: #4CAF50;
 }
+
 
 
 /* Footer */
