@@ -37,6 +37,35 @@ li a:hover:not(.active) {
 
 
 
+/* Image et texte en haut de page */
+
+.entete-content.img {
+	padding: 0px;
+    width:100%;
+}
+
+.entete-content {
+    background-image: url('livres_rogner.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    height: 400px;
+}
+
+
+.entete-content h3 {
+	position: relative;
+    top: 120px;
+    left: 150px;
+    font-family: 'Montserrat Bold', arial;
+    color: #ffffff;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px #777777;
+
+}
+
+
+
 /* Footer */
 
 .footer-content{
