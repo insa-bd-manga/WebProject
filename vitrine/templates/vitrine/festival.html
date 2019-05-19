@@ -1,6 +1,84 @@
 {% extends "base.html" %}
 {% block titreOnglet %} Festival {% endblock %}
+{%  load static %}
+{% block styleSup %}<link href="{% static 'vitrine/actus.css' %}" rel="stylesheet"> {% endblock  %}
 {% block content %}
-    festival
+    <div class="lesArticles">
+
+
+        <div>
+            <h1 class="titre-actu"> Le festival </h1>
+        </div>
+        <div class="description-actu">Retrouver toutes les infos concernant le festival de BéDéologie et les concours !</div>
+        <br/>
+
+        {% for article in last_articles %}
+            <div class= "articles">
+                <a href="/article/{{ article.id }}">
+                    <h3 class="titre-article">{{ article.titre|safe }}</h3>
+                    <p class="contenu-article"><div>{{ article.contenu|safe|truncatewords:80 }}</div></p>
+                    <p class="article-infos">Publié par {{ article.auteur }}. Le {{ article.date }}</p>
+                </a>
+            </div>
+            <hr>
+        {% endfor %}
+
+        {#  Début de la partie qui Sert à naviguer entre les pages #}
+        <div class="pages">{% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
+            <span id="nb_pages"></span>
+            {% if page != pages_necess  %}<a id="next_page" href="">Page suivante</a>{% endif %}
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var page_suivante = document.getElementById('next_page');
+        var page_precedente = document.getElementById('previous_page');
+        var nbr_pages = document.getElementById("nb_pages");
+
+
+        var text = '';
+        var nb_pages_necessaire = ((({{ nbr_articles }})/10)+1) ;
+        for(var i=1;i<nb_pages_necessaire; i++) {
+
+            if ("{{ tag }}" == ""){
+                text += " <a href='/actus/" +(i-1)+"' > " + i + " </a>";
+            }
+            else {
+                text += "<a href='/actus/{{ tag }}/"+(i-1)+"'>" + i + " </a> ";
+            }
+
+
+
+        }
+
+        text+='';
+        nbr_pages.innerHTML = text;
+
+        var num_page_suivante;
+        var num_page_precedente;
+        var tag_page =0 ;
+         if ("{{ tag }}" != ""){
+             tag_page = "{{ tag }}" + "/";
+         }
+         else {
+             tag_page = "{{ tag }}";
+         }
+
+        num_page_suivante = {{ page }} +1;
+        num_page_precedente = {{ page }} -1;
+
+        if (page_suivante != null){
+            page_suivante.href = "/actus/" + tag_page + num_page_suivante;
+        }
+
+
+        if (page_precedente!=null){
+            page_precedente.href="/actus/"+tag_page+num_page_precedente;
+        }
+
+    </script>
+    {#  Fin de la partie qui Sert à naviguer entre les pages #}
 {% endblock %}
 
