@@ -30,7 +30,7 @@ def recherche(request, num_page=0):
     num_page = 0
 
     #Récupération des n articles avec les critères de recherches inclus en paramètres de la fonction???
-    n=10
+    n=20
 
     #Formulaire de recherche
     form = RechercheLivreForm(request.POST or None)
@@ -43,7 +43,7 @@ def recherche(request, num_page=0):
     #J'ai conscience que le dernier filtre n'est pas intuitif, la conversion de la BDD laisse quelques traces, certains
     #noms ne sont pas forcément pertinents, mais j'ai pas voulu prendre la liberté de les renommer. Ici, ID correspond aux
     #Auteurs d'un ouvrage. Ca fonctionne, par contre, aucun doute là dessus.
-    query = Book.objects.filter(title__icontains=titre).filter(kind__icontains=genre).filter(id__name__icontains=auteur).filter(Q(serial_id__title__icontains=serie) | Q(serial_id=None)).order_by("title")
+    query = Book.objects.filter(title__icontains=titre).filter(kind__icontains=genre).filter(id__name__icontains=auteur).filter(Q(serial_id__title__icontains=serie) | Q(serial_id=None)).order_by("title").distinct()
     nombre_reponses=len(query)
     query = query[n * (num_page):n * (num_page + 1)]
 
