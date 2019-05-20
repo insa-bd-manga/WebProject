@@ -37,7 +37,7 @@
         {#  Début de la partie qui Sert à naviguer entre les pages #}
         <div class="pages">{% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
             <span id="nb_pages"></span>
-            {% if page != pages_necess  %}<a id="next_page" href="">Page suivante</a>{% endif %}
+            {% if page < pages_necess  %}<a id="next_page" href="">Page suivante</a>{% endif %}
         </div>
 
     </div>
