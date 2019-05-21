@@ -7,14 +7,28 @@
 {% endblock %}
 
 {% block content %}
+
     <div class="global">
 
         <div class="formulaire">
             <h1 class="titres">Rechercher un livre</h1>
             <form action="{% url "recherche" num_page%}" method="post">
                 {% csrf_token %}<!--Permet de sécuriser le POST -->
-                {{ form.as_p }}
-                <input type="submit" value="Chercher" />
+
+                <div class="half left">
+                    <select class="choix-genre">
+                            {% for genre in form.choix_genre %}
+                                <option value="{{ genre.0 }}">{{ genre.1 }}</option>
+                            {% endfor %}
+                    </select>
+                    <p><input id="id_auteur" type="text" name="auteur" maxlength="40" placeholder="Auteur"></p>
+                </div>
+
+                <div class="half right">
+                    <p><input id="id_titre" type="text" name="titre" maxlength="100" placeholder="Titre"></p>
+                    <p><input id="id_serie" type="text" name="serie" maxlength="100" placeholder="Série"></p>
+                </div>
+                <input id="input-chercher" type="submit" value="Chercher" />
             </form>
             <br>
         </div>
@@ -23,10 +37,16 @@
 
         <div class="criteres">
             <h1 class="titres">Recherche actuelle</h1>
-            <span class="texte_recherche"> Genre </span>: {{ genre|default:"BD et Manga " }}. <br>
-            <span class="texte_recherche"> Auteur </span>: {{ auteur|default:"tous les auteurs " }}. <br>
-            <span class="texte_recherche"> Titre </span>: {{ titre|default:"tous" }}. <br>
-            <span class="texte_recherche"> Série </span>: {{ serie|default:"toutes" }}. <br>
+            {% if genre == "b" %}
+                <span class="texte_recherche"> Genre </span>: BD<br>
+            {% elif genre == "m" %}
+                <span class="texte_recherche"> Genre </span>: Manga<br>
+            {% else %}
+                <span class="texte_recherche"> Genre </span>: BD et Manga<br>
+            {% endif %}
+            <span class="texte_recherche"> Auteur </span>: {{ auteur|default:"tous les auteurs" }} <br>
+            <span class="texte_recherche"> Titre </span>: {{ titre|default:"tous" }} <br>
+            <span class="texte_recherche"> Série </span>: {{ serie|default:"toutes" }} <br>
             <br>
         </div>
 
@@ -36,6 +56,7 @@
             <h1 class="titres">Résultats</h1>
             {% for livre in query %}
                 <span class = "texte_recherche">{{ livre.title }}, par {{ livre.id.first.name }}. Référence : {{ livre.reference }}</span>
+                <br>
             {% empty %}
                 <p>Aucun livre trouvé</p>
                 <p>¯\_(ツ)_/¯</p>

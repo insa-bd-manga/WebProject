@@ -2,6 +2,8 @@ from django.shortcuts import render
 from bibliotheque.models import Book, Author, Author_to_book
 from bibliotheque.forms import *
 from django.db.models import Q
+from math import *
+
 
 def recherche(request, num_page=0):
     """page de "moteur de recherche d'ouvrages"
@@ -27,9 +29,8 @@ def recherche(request, num_page=0):
     genre = ""
     titre = ""
     serie = ""
-    num_page = 0
 
-    #Récupération des n articles avec les critères de recherches inclus en paramètres de la fonction???
+    #Récupération des n articles avec les critères de recherches inclus en paramètres de la fonction
     n=20
 
     #Formulaire de recherche
@@ -45,6 +46,7 @@ def recherche(request, num_page=0):
     #Auteurs d'un ouvrage. Ca fonctionne, par contre, aucun doute là dessus.
     query = Book.objects.filter(title__icontains=titre).filter(kind__icontains=genre).filter(id__name__icontains=auteur).filter(Q(serial_id__title__icontains=serie) | Q(serial_id=None)).order_by("title").distinct()
     nombre_reponses=len(query)
+    pages_necess=ceil((nombre_reponses/n))-1
     query = query[n * (num_page):n * (num_page + 1)]
 
     return render(request, 'bibliotheque/recherche.html', locals())
