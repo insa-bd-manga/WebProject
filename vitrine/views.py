@@ -16,6 +16,7 @@ from django.utils import timezone
 from .forms import ContactForm, CommentForm, RechercheForm
 
 from math import *
+import time
 
 from django.contrib.auth.decorators import login_required
 
@@ -80,15 +81,9 @@ def article(request, id_article=1, page_commentaire=0):
 
     :return paquet http contenant la page"""
 
+
     # acquisition de l'article
     article = get_object_or_404(Article, id=id_article)
-    # acquisition des 50 derniers commentaires
-    n = 10
-    commentaires = Commentaire.objects.filter(id_article=id_article).order_by("date")
-    nbr_comms = len(commentaires)
-    pages_comms_necessaires = ceil((nbr_comms / 10)) - 1
-    commentaires = commentaires[n*(page_commentaire):n*(page_commentaire+1)]
-
 
     # formulaire de commentaire
     envoi = False
@@ -102,6 +97,18 @@ def article(request, id_article=1, page_commentaire=0):
 
         # si envoie réussi
         envoi = True
+
+
+
+    # acquisition des 10 derniers commentaires
+    n = 10
+    commentaires = Commentaire.objects.filter(id_article=id_article).order_by("date")
+    nbr_comms = len(commentaires)
+    pages_comms_necessaires = ceil((nbr_comms / 10)) - 1
+    commentaires = commentaires[n*(page_commentaire):n*(page_commentaire+1)]
+
+
+
 
     return render(request, 'vitrine/article.html', locals())
 
@@ -170,7 +177,10 @@ def archives(request, num_page=0):
     # Récupération des n articles avec le tag et la date spécifiés
     query = Article.objects.filter(date__year__icontains=year_URL).filter(date__month__icontains=month_URL)\
                 .filter(tag__nom_tag__icontains=tag_URL).filter(date__lt=timezone.now())\
-                .order_by("-date")[n * (num_page):n * (num_page + 1)]
+                .order_by("-date")
+    nbr_articles = len(query)
+    pages_necess = ceil((nbr_articles/10))-1 #nombre de pages necessaire pour afficher tout les articles -1 du à l'indexation commencant à 0
+    query=query[n * (num_page):n * (num_page + 1)]
 
     #récupération des infos du formulaire
     form = RechercheForm(request.POST or None)

@@ -5,6 +5,7 @@ from bibliotheque import views as biblio_views
 urlpatterns = [
     path('', views.index, name='index'),
 
+    path('recherche-ouvrages/<int:num_page>', biblio_views.recherche, name='recherche'),
     path('recherche-ouvrages', biblio_views.recherche, name='recherche-ouvrages'),
 
     path('actus/<str:tag>/<int:num_page>', views.actus, name='actus'),

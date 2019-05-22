@@ -83,3 +83,21 @@
     text-decoration: none;
     color: #de7328;
 }
+
+/* Pour la pagination*/
+.pages{
+    text-align: center;
+}
+
+.pages a{
+
+    color: #000000;
+    text-decoration: none;
+
+}
+
+
+.pages > a:focus, .pages > a:hover{
+    text-decoration: none;
+    color: #de7328;
+}

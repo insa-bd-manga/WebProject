@@ -175,6 +175,7 @@ form #input-chercher:hover {
     margin-top: 30px;
     margin-bottom: 10px;
 }
+
 #Resultats_de_recherche{
   border-collapse: collapse;
   width: 100%;
@@ -195,4 +196,22 @@ form #input-chercher:hover {
   text-align: left;
   background-color: #de7328;
   color: white;
+}
+
+/* Pour la pagination*/
+.pages{
+    text-align: center;
+}
+
+.pages a{
+
+    color: #000000;
+    text-decoration: none;
+
+}
+
+
+.pages > a:focus, .pages > a:hover{
+    text-decoration: none;
+    color: #de7328;
 }

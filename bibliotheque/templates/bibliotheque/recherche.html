@@ -72,6 +72,56 @@
             </table>
         </div>
 
+                   {#  Début de la partie qui Sert à naviguer entre les pages #}
+        <div class="pages">{% if num_page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
+            <span id="nb_pages"></span>
+            {% if num_page < pages_necessaires  %}<a id="next_page" href="">Page suivante</a>{% endif %}
+        </div>
+
     </div>
+
+    <script type="text/javascript">
+        var page_suivante = document.getElementById('next_page');{#  On récupère un élément (identifié par son id de la page html et on le stock dans une variable  #}
+        var page_precedente = document.getElementById('previous_page');
+        var nbr_pages = document.getElementById("nb_pages");
+
+
+        var text = '';{#  Le but est de remplir la balise span id=" nb_pages" avec les numéros et liens corresponds au pages des actualités #}
+        var nb_pages_necessaire = ((({{ nombre_reponses }})/10)+1) ;{#  variable qui est vide pour l'instant mais vas être remplie par la numérotation de page #}
+        for(var i=1;i<nb_pages_necessaire; i++) {{#  Calculr du nombre  de numéro de page qui va faloir afficher #}
+
+            {#  La boucle sert à  crée les numéros que l'on va afficher sur la page on fonction du nombre d'articles et crée aussi les liens associés #}
+            {#  On distingue le cas où la personne recherche les articles contenant un tag précis, si c'est le cas on ajoute le tag à la fabrication du lien de la page#}
+            if((i>=({{ num_page }}-4))&&(i<=({{ num_page }}+6))){
+                text += " <a href='/recherche-ouvrages/" +(i-1)+"' > " + i + " </a>";
+            }
+
+        }
+
+        text+='';{#  on complète une chaine de caratère vide pour s'assurer que text est bien un string #}
+        nbr_pages.innerHTML = text;{#  On introduit la variable txt dans la page on précisant que c'est de l'HTML pour qu'il intèprète les balises <a> pcomme des liens #}
+
+        {#  Ici on veut construit le lien vers les pages suivantes et présédentes #}
+        {#  De base le href des liens de page suivante et précédente, mais on viens dynamiquement au chargement de la page remplir c'est lien en fonction de la pages actuel #}
+        var num_page_suivante;
+        var num_page_precedente;
+
+        {#  Calcule de la page suivante et précédente #}
+        num_page_suivante = {{ num_page }} +1;
+        num_page_precedente = {{ num_page }} -1;
+
+
+        {#  Changement à proprement dit du lien #}
+        if (page_suivante != null){
+            page_suivante.href = "/recherche-ouvrages/"  + num_page_suivante;
+        }
+
+
+        if (page_precedente!=null){
+            page_precedente.href="/recherche-ouvrages/"+num_page_precedente;
+        }
+
+    </script>
+    {#  Fin de la partie qui Sert à naviguer entre les pages #}
 
 {% endblock %}
