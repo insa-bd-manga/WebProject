@@ -6,7 +6,9 @@ from . import admin
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('recherche-ouvrages/<int:num_page>', biblio_views.recherche, name='recherche'),
     path('recherche-ouvrages', biblio_views.recherche, name='recherche-ouvrages'),
+
 
 #   path('ouvrage/<str:auteur>/<str:titre>/<int:num_page>', views.ouvrage, name='ouvrage'),
 
