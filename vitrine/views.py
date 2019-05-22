@@ -1,4 +1,3 @@
-from datetime import datetime
 from django.shortcuts import render, get_object_or_404, redirect
 
 #pour les modèles
@@ -22,6 +21,9 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def doc(request):
+    """Cette view retourne une page statique contenant la documentation technique du site.
+    Il faut être connecté en tant qu'administrateur pour y accéder."""
+
     return render(request, 'vitrine/documentation.html')
 
 def index(request):
@@ -38,35 +40,6 @@ def index(request):
     query = Article.objects.all().filter(date__lt=timezone.now()).order_by("-date")[:3]
 
     return render(request, 'vitrine/index.html', {"last_articles": query})
-
-
-def rechercheOuvrages(request):
-    """Page de recherche d'ouvrage par nom/auteur
-
-    :param request : OSEF
-    :type request : requête http
-
-    :return paquet http contenant la page"""
-    return render('vitrine/rechercheOuvrage.html', locals())
-
-
-# def ouvrage(request, auteur, titre, num_page):
-#     """Affiche les résultats de la recherche d'ouvrage
-#
-#     :param request : OSEF
-#     :param auteur : auteur recherché
-#     :param titre : titre recherché
-#     :type request : requête http
-#     :type auteur : String, peut être ""
-#     :type auteur : String, peut être ""
-#
-#     :return paquet http contenant la page"""
-#
-#     #Cherche dans la bdd les articles qui contiennent l'auteur et le titre renseigné. Si un des paramètres est vide,
-#     #il n'influera pas sur la recherche Si les deux sont vides, on a toute la Bdd
-#     n=10
-#     query=Ouvrage.objects.filter(Q(auteur__icontains=auteur) & Q(titre__icontains=titre)).order_by("titre")[n*(num_page):n*(num_page+1)]
-#     return render(request, 'vitrine/ouvrage.html', {"livres": query, "page": num_page})
 
 
 def actus(request, tag="", num_page=0):
