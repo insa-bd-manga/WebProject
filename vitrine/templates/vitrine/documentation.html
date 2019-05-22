@@ -7,311 +7,322 @@
 
 {% block content %}
 
-    <h1 style="text-align: center;"><span style="font-weight: 400;">Rapport de conception</span></h1>
-    <h3><strong>R&eacute;alisation du projet</strong></h3>
-    <p style="text-align: justify;"><span style="font-weight: 400;">Le club BD/Manga est une association de l&rsquo;INSA Lyon. Le club est propri&eacute;taire d&rsquo;une biblioth&egrave;que de plus de 5200 ouvrages, en lecture libre pour tous. Pour le projet de Web dynamique nous avons d&eacute;cid&eacute; de mettre en place un site web afin de faire conna&icirc;tre cette association.</span></p>
-    <p style="text-align: justify;"><span style="font-weight: 400;">Les objectifs que nous avions d&eacute;fini &eacute;taient les suivants :</span></p>
-    <ul style="text-align: justify;">
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Un site durable (site stable, bien document&eacute; et facile d&rsquo;entretien)</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Vitrine (site joli et ergonomique avec pr&eacute;sentation, actu, info pratiques&hellip;) </span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Outil : moteur de recherche des ouvrages disponibles au club </span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Flux RSS pour suivre les actualit&eacute;s du club</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Responsive design</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Outil : WebApp (mettre notre outil de gestion de biblioth&egrave;que en ligne)</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Interactions entre utilisateurs : syst&egrave;me de notation/recommandation des ouvrages</span></li>
-    </ul>
-    <p style="text-align: justify;"><span style="font-weight: 400;">Nous avons choisi d&rsquo;aborder le projet dans une d&eacute;marche agile. C&rsquo;est-&agrave;-dire que les objectifs cit&eacute;s pr&eacute;c&eacute;demment sont class&eacute;s par ordre de priorit&eacute;. Nous les avons suivi dans l&rsquo;ordre et un &agrave; un. De plus, dans cette m&eacute;thode la vision du client est tr&egrave;s importante. Nous nous sommes donc r&eacute;f&eacute;r&eacute;s &agrave; L&eacute;o, qui est le pr&eacute;sident du club BD/Manga, pour avoir son avis sur ce que l&rsquo;on faisait. Nous avons travaill&eacute; avec Git pour ce projet. Lorsque l&rsquo;objectif en cours &eacute;tait termin&eacute; et accept&eacute; par L&eacute;o, nous l&rsquo;assemblions avec le projet global. Le fait de ne pas travailler directement sur le projet global nous permettait de garder une sauvegarde fonctionnelle au cas o&ugrave; un probl&egrave;me se produirait lors de la r&eacute;alisation des nouvelles parties. La m&eacute;thode agile nous permet aussi de d&eacute;finir des objectifs mais de ne pas forc&eacute;ment tous les r&eacute;aliser. En effet, nous nous sommes plut&ocirc;t attard&eacute; sur la qualit&eacute; au lieu de la quantit&eacute;. Nous pouvons donc ainsi livrer un site web fonctionnel avec les objectifs les plus importants r&eacute;alis&eacute;s : la durabilit&eacute; du site, la vitrine et l&rsquo;outil de moteur de recherche des ouvrages.</span></p>
-    <p style="text-align: justify;"><span style="font-weight: 400;">Les autres objectifs pourront donc &ecirc;tre r&eacute;alis&eacute;s plus tard si nous voulons am&eacute;liorer le site web. En effet, comme nous avons cr&eacute;&eacute; un site durable, les membres du club pourront reprendre notre code et ainsi l&rsquo;am&eacute;liorer selon leurs envies.</span></p>
-    <h3><strong>Organisation du groupe</strong></h3>
-    <p style="text-align: justify;"><span style="font-weight: 400;">Pour r&eacute;aliser le projet nous avons tout d&rsquo;abord suivi des tutoriels afin de se former aux diff&eacute;rents outils que nous allions utiliser. Ensuite, nous nous sommes r&eacute;partis les diff&eacute;rentes parties du site : Back-end/Front-end. A partir de l&agrave; nous nous sommes sp&eacute;cialis&eacute;s dans notre domaine tout en restant connect&eacute;s aux autres parties du projet pour rester coh&eacute;rent dans ce que nous faisions.</span></p>
-    <p style="text-align: justify;"><span style="font-weight: 400;">Lors du d&eacute;veloppement des diff&eacute;rentes parties nous avons fait des tests pour &ecirc;tre s&ucirc;r que tout fonctionnait bien. Par exemple, pour le formulaire de contact nous avons envoy&eacute; plusieurs mails, essay&eacute; toutes les fonctionnalit&eacute;s (bon captcha, mauvais captcha, etc&hellip;) afin de voir si le mail ne s&rsquo;envoyait bien que lorsque tout &eacute;tait correctement renseign&eacute;. Ensuite, nous avons fait de m&ecirc;me pour les commentaires et avons envoy&eacute; une vingtaine de commentaires, plus ou moins long pour diff&eacute;rents articles. Nous avons v&eacute;rifi&eacute; l&rsquo;affichage des commentaires et le dynamisme du formulaire. Un autre exemple de test, pour la pagination dynamique sur les pages &ldquo;Actus&rdquo; et &ldquo;Le festival&rdquo; nous avons cr&eacute;&eacute; plus d&rsquo;une vingtaine d&rsquo;articles pour voir si le changement des pages se faisait correctement.</span></p>
-    <h3><strong>Ce qu&rsquo;il reste &agrave; faire</strong></h3>
-    <ul>
-    <li><strong><span style="font-weight: 400;">Gestion des utilisateurs</span></strong></li>
-    <li><span style="font-weight: 400;">d&eacute;velopper l&rsquo;app de gestion de biblioth&egrave;que</span></li>
-    <li><span style="font-weight: 400;">mettre en place l'upload des images/fichiers</span></li>
-    <li><span style="font-weight: 400;">mettre en place une mise en page sp&eacute;ciale pour imprimer la page "infos pratiques"</span></li>
-    <li><span style="font-weight: 400;">et plein d'autres trucs...</span></li>
-    </ul>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h1 style="text-align: center;"><span style="font-weight: 400;">Doc technique</span></h1>
-    <h2><span style="font-weight: 400;">Introduction</span></h2>
-    <p><span style="font-weight: 400;">Vous trouverez dans cette documentation les d&eacute;tails techniques concernant la structure et le fonctionnement du site WEB du club BD/Mangas de l&rsquo;INSA.</span></p>
-    <p>&nbsp;</p>
-    <h2><span style="font-weight: 400;">Sommaire</span></h2>
-    <p><span style="font-weight: 400;">I/ Outils techniques utilis&eacute;s</span></p>
-    <p><span style="font-weight: 400;">II/Fonctionnement g&eacute;n&eacute;ral</span></p>
-    <p style="padding-left: 30px;"><span style="font-weight: 400;">1/</span><span style="font-weight: 400;">Vitrine</span></p>
-    <p style="padding-left: 60px;"><span style="font-weight: 400;">a/Mod&egrave;les</span></p>
-    <p style="padding-left: 60px;"><span style="font-weight: 400;">b/Vues</span></p>
-    <p style="padding-left: 60px;"><span style="font-weight: 400;">c/Templates</span></p>
-    <p style="padding-left: 60px;"><span style="font-weight: 400;">d/Point sur la charte graphique du club</span></p>
-    <p style="padding-left: 30px;"><span style="font-weight: 400;">2/</span><span style="font-weight: 400;">Bibliotheque</span></p>
-    <p style="padding-left: 60px;"><span style="font-weight: 400;">a/Mod&egrave;les</span></p>
-    <p style="padding-left: 60px;"><span style="font-weight: 400;">b/Vues</span></p>
-    <p style="padding-left: 60px;"><span style="font-weight: 400;">c/Templates</span></p>
-    <p><span style="font-weight: 400;">III/Conclusion</span></p>
-    <p>&nbsp;</p>
-    <h2><span style="font-weight: 400; color: #ff0000;">I/ Outils techniques utilis&eacute;s</span></h2>
-    <p><strong>Backend</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">r&eacute;alis&eacute; en python 3.7.2 avec le framework Django2 </span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">widgets </span></li>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">ckeditor pour l&rsquo;&eacute;dition d&rsquo;articles</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">django-simple-captcha</span></li>
-    </ul>
-    </ul>
-    <p><strong>Frontend</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">HTML 5, CSS&hellip;</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">JS (sans framework)</span></li>
-    </ul>
-    <p><strong>Outils de d&eacute;veloppement</strong></p>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">PyCharm Pro</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">sqliteStudio</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">git et github (repository public)</span></li>
-    </ul>
-    <p><strong>Fonctionnement de Django</strong></p>
-    <p><a href="https://user.oc-static.com/files/386001_387000/386517.png"><span style="font-weight: 400;"><img src="https://user.oc-static.com/files/386001_387000/386517.png" alt="mod&egrave;le MVT" width="679" height="304" /></span></a></p>
-    <p><span style="font-weight: 400;">Django utilise une variante du mod&egrave;le MVC : le MVT (Mod&egrave;le, View, Template).</span></p>
-    <p><span style="font-weight: 400;">Tout d&rsquo;abord, comme pour n&rsquo;importe quel site web, le serveur &eacute;coute et accepte les requ&ecirc;tes de connexion. Ensuite, il envoie la requ&ecirc;te au contr&ocirc;leur. Celui-ci fait notamment le mapping url et aiguille vers une vue. Les vues sont le centre de la fabrication des pages web en utilisant les mod&egrave;les et les templates. Les mod&egrave;les sont un syst&egrave;me haut niveau de gestion de donn&eacute;es. Les templates permettent la mise en forme de la page. Ils sont &eacute;crits en HTML, CSS et JS. Voici donc un exemple de fonctionnement d&rsquo;une vue : </span></p>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">prise en param&egrave;tre des infos de l&rsquo;url</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">recherche ou modification de la base de donn&eacute;es via les mod&egrave;les</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">mise &agrave; disposition de variables aupr&egrave;s du template</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">renvoie du template encapsul&eacute; dans une requ&ecirc;te HTML</span></li>
-    </ul>
-    <p><span style="font-weight: 400;">Notons qu&rsquo;une vue peut interagir avec d&rsquo;autres &eacute;l&eacute;ments, tels que les formulaires ou des m&eacute;thodes contenues dans des packages ext&eacute;rieurs.</span></p>
-    <p>&nbsp;</p>
-    <h2><span style="font-weight: 400; color: #ff0000;">II/Fonctionnement g&eacute;n&eacute;ral</span></h2>
-    <h3 style="padding-left: 30px;"><span style="font-weight: 400;"><span style="color: #0000ff;">1/Vitrine</span> </span></h3>
-    <h4 style="padding-left: 60px;"><span style="color: #003300;"><strong>a/Mod&egrave;les</strong></span></h4>
-    <p><span style="font-weight: 400;">Dans cette partie, le sch&eacute;ma repr&eacute;sente la base de donn&eacute;e tandis que la liste repr&eacute;sente les mod&egrave;les. Pour d&eacute;velopper sur ce site web, seulement la liste de mod&egrave;les.</span></p>
-    <p>&nbsp;</p>
-    <p><span style="font-weight: 400;">
-        <img
-                src = "{% static 'vitrine/img/BDD_vitrine.PNG'%}"
-                width="30%"
-        /></span></p>
-    <p>&nbsp;</p>
-    <p><span style="font-weight: 400;">3 mod&egrave;les (4 tables) :</span></p>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Tag</span></li>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">nom_tag: string max 30 caract&egrave;res</span></li>
-    </ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Article</span></li>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">titre: string max 100 caract&egrave;res</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">auteur: string max 50 caract&egrave;res</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">date: datetime, par d&eacute;faut rempli par la date et l&rsquo;heure du serveur au moment du post de l&rsquo;article. NB : les vues sont faites de telle sorte qu&rsquo;un article peut &ecirc;tre &eacute;crit &agrave; l&rsquo;avance. Il ne sera visible qu&rsquo;une fois que la date du serveur sera ult&eacute;rieure &agrave; la date de l&rsquo;article.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">contenu: string infini</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">tag: un ou plusieurs Tag(s) (many-to-many)</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">epingler: un boolean</span></li>
-    </ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Commentaire</span></li>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">id_article: cl&eacute; &eacute;trang&egrave;re faisant le lien avec l&rsquo;article</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">date: datetime, de la date du serveur au moment du post du commentaire.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">contenu: string infini.</span></li>
-    </ul>
-    </ul>
-    <p><span style="font-weight: 400;">Si il y a 4 tables pour trois mod&egrave;les, c&rsquo;est parce que les tables Articles et Tag sont li&eacute;es en many-to-many : un article peut avoir plusieurs tag et un tag peut avoir plusieurs articles. Dans ce cas, Django g&eacute;n&egrave;re automatiquement une table interm&eacute;diaire contenant les 2 cl&eacute;s primaires des 2 tables concern&eacute;es. Pour le d&eacute;veloppeur, cette table est totalement invisible.</span></p>
-    <h4 style="padding-left: 60px;"><span style="color: #003300;"><strong>b/Vue</strong></span></h4>
-    <p><span style="font-weight: 400;">Les vues renvoient toutes un paquet HTTP contenant la page web compl&egrave;te.</span></p>
-    <ul>
-    <li style="font-weight: 400;"><strong>index</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Il s&rsquo;agit de la vue relative &agrave; l&rsquo;accueil du site.</span></p>
-    <p><span style="font-weight: 400;">Envoie au template les 3 derniers articles en date au template index.html</span></p>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>actus</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Prend en param&egrave;tre optionnel un nom de tag et le num&eacute;ro de page.</span></p>
-    <p><span style="font-weight: 400;">Envoie n articles au template. Si il s&rsquo;agit de la page 1, ce sont les n derniers articles. Si c&rsquo;est la page 2, ce sont les n articles suivants. Il y a aussi la possibilit&eacute; de choisir un tag pour ne retenir que les articles ayant ce tag.</span></p>
-    <p><span style="font-weight: 400;">Met &eacute;galement &agrave; disposition du template le nombre exact d&rsquo;articles envoy&eacute;s (inf&eacute;rieur ou &eacute;gal &agrave; n) ainsi que le nombre totale de pages (nombre_articles / n).</span></p>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>article</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Prend en param&egrave;tre &ldquo;id_article&rdquo;, l&rsquo;identifiant de l&rsquo;article &agrave; afficher, ainsi que &ldquo;page_commentaire&rdquo;, le num&eacute;ro de page de commentaire (il y a n commentaires par page).</span></p>
-    <p><span style="font-weight: 400;">Les n commentaires sont fournis dans l&rsquo;ordre de parution, selon la page.</span></p>
-    <p><span style="font-weight: 400;">La page renvoy&eacute;e contient &eacute;galement le formulaire &ldquo;CommentForm&rdquo; de vitrine/forms.py. Ce formulaire contient un champ de texte infini ainsi qu&rsquo;un captcha. Pour l&rsquo;instant, il n&rsquo;y a pas de champ utilisateur car nous n&rsquo;avons pas de gestion de session.</span></p>
-    <p><span style="font-weight: 400;">Dans le cas de l&rsquo;envoi d&rsquo;un commentaire, la page la base de donn&eacute;e est mise &agrave; jour, la page est raffraichie et la variable &ldquo;envoi&rdquo; passe &agrave; True.</span></p>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>festival</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Prend en param&egrave;tre le num&eacute;ro de la page (avec n articles par page).</span></p>
-    <p><span style="font-weight: 400;">Envoie au template les n derniers articles ayant les tags &ldquo;festival&rdquo; et/ou &ldquo;concours_BD&rdquo;, tri&eacute;es par &eacute;pinglage puis par date. Un article &eacute;pingl&eacute; est un article dont le champ &ldquo;epingler&rdquo; est &eacute;gal &agrave; 1. Ceci permet de mettre en avant certains articles plus importants. Comme dans la page actus, il y a n articles ou moins par page.</span></p>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Contact</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Utilise le formulaire &ldquo;ContactForm&rdquo;, cod&eacute; dans vitrine/forms.py. Ce formulaire contient 5 champs :</span></p>
-    <ul style="list-style-type: circle;">
-    <li style="font-weight: 400;"><span style="font-weight: 400;">sujet: chaine de maximum 5 caract&egrave;res</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">message: cha&icirc;ne infinie de caract&egrave;re</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">envoyeur: adresse mail</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">renvoi: boolean qui d&eacute;finit si l&rsquo;utilisateur souhaite recevoir une copie du mail sur sa bo&icirc;te mail.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">captcha: g&eacute;n&egrave;re un captcha en utilisant le module django-simple-captcha</span></li>
-    </ul>
-    <p><span style="font-weight: 400;">L&rsquo;envoi du formulaire entraine 2 choses dans la vue :</span></p>
-    <ul style="list-style-type: circle;">
-    <li style="font-weight: 400;"><span style="font-weight: 400;">l&rsquo;envoi du mail de contact directement &agrave; l&rsquo;adresse mail du club BD/Manga</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">l&rsquo;envoi optionnel d&rsquo;une copie de ce mail &agrave; l&rsquo;envoyeur</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">La variable bool&eacute;enne &ldquo;envoi&rdquo; passe &agrave; True pour permettre au template d&rsquo;indiquer &agrave; l&rsquo;utilisateur que l&rsquo;envoi s&rsquo;est bien d&eacute;roul&eacute;.</span></li>
-    </ul>
-    <p><span style="font-weight: 400;">Fonctionnement de l&rsquo;envoi de mails :</span></p>
-    <p><span style="font-weight: 400;">Le site dispose de sa propre adresse mail (</span><a href="mailto:clubbdinsa@hotmail.fr"><span style="font-weight: 400;">clubbdinsa@hotmail.fr</span></a><span style="font-weight: 400;">). Dans les faits, nous n&rsquo;utilisons que son service d&rsquo;envoie (SMTP). Les param&egrave;tres de connexions sont dans ./setup.py, ligne 142. Le mot de passe est stock&eacute; dans le fichier ./passwords.txt, fichier non partag&eacute; dans le git.</span></p>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Archives</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Prend en param&egrave;tre le num&eacute;ro de page (avec n articles par page).</span></p>
-    <p><span style="font-weight: 400;">Prend &eacute;galement les param&egrave;tres sp&eacute;ciaux d&rsquo;url &ldquo;tag&rdquo;, &ldquo;year&rdquo;, &ldquo;month&rdquo;.</span></p>
-    <p><span style="font-weight: 400;">Utilise le formulaire &ldquo;RechercheForm&rdquo; de vitrine/forms.py. Ce formulaire comporte 3 menus d&eacute;roulants : </span></p>
-    <ul style="list-style-type: circle;">
-    <li style="font-weight: 400;"><span style="font-weight: 400;">tag: comportant tous les tags</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">mois: comportant tous les mois o&ugrave; un article a &eacute;t&eacute; &eacute;crit</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">annee: comportant toutes les ann&eacute;es o&ugrave; un article a &eacute;t&eacute; &eacute;crit.</span></li>
-    </ul>
-    <p><span style="font-weight: 400;">La vue r&eacute;cup&egrave;re les donn&eacute;es fournies par l&rsquo;utilisateur dans les donn&eacute;es et se redirige vers elle-m&ecirc;me avec les bons param&egrave;tres. Ces param&egrave;tres permettent ensuite de faire la recherche appropri&eacute;e dans la base de donn&eacute;es et de sortir les articles correspondants. Comme dans la vue actus, celle-ci envoie au template n articles par page de recherche.</span></p>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Infos</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Il s'agit de la vue relative &agrave; la page "infos pratiques".</span></p>
-    <p><span style="font-weight: 400;">Fait juste le lien avec le template &ldquo;vitrine/infos.html&rdquo;, qui est une page statique.</span></p>
-    <h4 style="padding-left: 60px;"><span style="color: #003300;"><strong>c/Templates</strong></span></h4>
-    <p><span style="font-weight: 400;">Afin de cr&eacute;er un site web structur&eacute; et coh&eacute;rent visuellement, nous avons cr&eacute;&eacute; une page base.html qui sert de base &agrave; toutes les autres. Gr&acirc;ce au framework Django il est possible de faire &ldquo;h&eacute;riter&rdquo; des caract&eacute;ristiques de ce documents de r&eacute;f&eacute;rence &agrave; toutes les autres pages web du site. On utilise pour cela les balises du framework Django { % block</span><em><span style="font-weight: 400;"> nom_block</span></em><span style="font-weight: 400;"> %}. On &eacute;vite ainsi de r&eacute;&eacute;crire toute la page &agrave; chaque fois.</span></p>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Base.html</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">On trouve dans ce document comme , dit ci-dessus, les &eacute;l&eacute;ments communs entre les diff&eacute;rentes pages du sites. On y trouve la structure standard d&rsquo;un document HTML (balises &lt;html&gt; &lt;head&gt; &lt;body&gt;).</span></p>
-    <ul style="list-style-type: circle;">
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Dans la balise &lt;head&gt; on retrouve des balises &lt;link&gt;, liens vers les fichiers css associ&eacute;es.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">La balise { % load static %} sert, sur la prochaine balise { % static</span><em><span style="font-weight: 400;"> element</span></em><span style="font-weight: 400;"> %}, &agrave; charger l&rsquo;&eacute;l&eacute;ment depuis la structure du site.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">La balise { % block styleSup %} est ici vide mais pourra &ecirc;tre remplie par les pages int&eacute;grant base.html afin de d&eacute;finir d&rsquo;autres fichiers CSS.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;"><span style="font-weight: 400;">La balisecontient la barre de navigation du site qui est commune &agrave; toutes les pages. Les noms pr&eacute;sents dans les balises &nbsp;{ % url <em><span style="font-weight: 400;"> nom_url</span></em><span style="font-weight: 400;"> %} font r&eacute;f&eacute;rence aux noms symboliques des urls pr&eacute;sents dans le fichier url.py</span></span></span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">La balise { % block content %} est vide et sera remplie par les pages qui &ldquo;h&eacute;riteront&rdquo; de base.html</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">La balise &lt;footer&gt; contient les &eacute;l&eacute;ments que l&rsquo;on retrouve sur toutes les pages en pied de page.</span></li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Pour le restes des pages HTML :</span>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">La balise </span><span style="font-weight: 400;">{ % extends "base.html" %} permet de r&eacute;cup&eacute;rer le code html du fichier base.html</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">On d&eacute;finit dans {\% block styleSup %} un lien vers une feuille de style sp&eacute;cifique &agrave; la page.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">On retrouve &agrave; l&rsquo;int&eacute;rieur de { % block &nbsp;content %} le contenue de la page (variant en fonction de la section du site dans laquelle on se trouve).</span></li>
-    </ul>
-    </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>L&rsquo;accueil (index.html) :</strong>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">La balise {\% for article in last_articles %} permet de r&eacute;cup&eacute;rer les articles pr&eacute;sents dans la variable last_articles , variable qui nous est donn&eacute;e par la view de index. Pour chaque article on vient r&eacute;cup&eacute;rer son id (pour cr&eacute;er le lien vers l&rsquo;article en question), son titre, son contenu (que l&rsquo;on tronque &agrave; 120 mots), son auteur et sa date de publication.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Il y a un lien &ldquo;Plus d&rsquo;articles&rdquo; &nbsp;qui redirige simplement sur la page actu.html</span></li>
-    </ul>
-    </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Actus</strong>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Pour trier les articles par tags, on utilise des balises { % url %} qui font appel &agrave; des urls particuli&egrave;res qui changent les param&egrave;tres de la vue, permettant d&rsquo;afficher les bons articles.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Pour l&rsquo;affiche des articles on utilise le m&ecirc;me principe que index.html avec ici un affichage d&rsquo;articles allant jusqu&rsquo;&agrave; 10.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Pour naviguer entre les pages lorsqu&rsquo;il y plus de 10 articles, On se sert de d&rsquo;un petit code Javascript pr&eacute;sent dans les balises &lt;script&gt;. Ce code cr&eacute;e le lien vers la page suivante et/ou pr&eacute;c&eacute;dente en fonction de la page actuel. Il calcule et affiche les num&eacute;ros de page en fonction du nombre d&rsquo;articles correspondant au tag.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">En loutre, on vient r&eacute;cup&eacute;rer les variables: page, pages_necess et nbr_articles, ce qui permet en combinaison avec la balise {  % if %} d&rsquo;afficher ou non &ldquo;Page pr&eacute;c&eacute;dente&rdquo; et &ldquo;Page suivante&rdquo;, si des articles existent &agrave; ces pages.</span></li>
-    </ul>
-    </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Festival</strong>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Cette page a la m&ecirc;me fonction et la m&ecirc;me construction que actus, mais affiche uniquement les articles en rapport avec le festival de B&eacute;D&eacute;ologie ou le concours BD.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">De plus elle affiche en premier les articles du festival dit &ldquo;&eacute;pingl&eacute;s&rdquo; qui sont d'actualit&eacute; mais cet aspect est g&eacute;r&eacute; par la vue associ&eacute;e.</span></li>
-    </ul>
-    </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Nos ouvrages (recherche.html)</strong>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Cette page est &agrave; part de l&rsquo;application dite &ldquo;vitrine&rdquo;, elle se situe dans une autre application; &ldquo;biblioth&egrave;que&rdquo;.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Elle sert de moteur de recherche, afin de trouver si un ouvrage est pr&eacute;sent ou non dans le club.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Elle utilise un formulaire associ&eacute; &agrave; la page (balise {{form.as_p}} qui est d&eacute;finit dans le fichier forms.py, qui fait le lien avec la BDD.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Pour le r&eacute;sultat de la recherche on utilise le m&ecirc;me principe que actus.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Contact</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">On utilise ici un formulaire, mais contrairement &agrave; &ldquo;nos ouvrages&rdquo;, il est &eacute;crit directement dans le fichier HTML afin d&rsquo;avoir un meilleur contr&ocirc;le dessus en CSS pour le rendre plus esth&eacute;tique.</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Le bouton &ldquo;Envoyer&rdquo; va d&eacute;clencher une requ&ecirc;te que la view va traiter pour envoyer l&rsquo;email au club BD/Mangas. </span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">De plus, une fois ce traitement effectu&eacute;, la variable &ldquo;envoi&rdquo; change, ce qui affiche &agrave; l&rsquo;utilisateur que le message &agrave; bien &eacute;t&eacute; envoy&eacute;.</span></li>
-    </ul>
-    </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Archives</strong>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Cela suit exactement le m&ecirc;me sch&eacute;ma que &ldquo;Nos ouvrages&rdquo;, mais on r&eacute;pertorie ici non pas les ouvrages, mais tous les articles publi&eacute;s par le club.</span></li>
-    </ul>
-    </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
-    <li style="font-weight: 400;"><strong>Infos pratiques</strong>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Page HTML basique contenant uniquement quelques informations concernant le club.</span></li>
-    </ul>
-    </li>
-    </ul>
-    <p>&nbsp;</p>
-    <h4 style="padding-left: 60px;"><strong><span style="color: #003300;">d/Point sur la charte graphique du club</span><br /></strong></h4>
-    <p><strong>POLICE</strong></p>
-    <p><span style="font-weight: 400;">D&eacute;clinaisons de Montserrat : </span><a href="http://fr.allfont.net/download/montserrat/"><span style="font-weight: 400;"><a>http://fr.allfont.net/download/montserrat/</a></span></a></p>
-    <p>&nbsp;</p>
-    <p><strong>COULEURS</strong></p>
-    <h3><strong>gris : </strong><span style="font-weight: 400;">#000000, #393939, #777777, #ffffff</span></h3>
-    <h3><strong>oranges : </strong><span style="font-weight: 400;">#c22a2d, #cf4b2a, #de7328, #e68a26</span></h3>
-    <p>&nbsp;</p>
-    <h3 style="padding-left: 30px;"><span style="font-weight: 400; color: #0000ff;">2/biblioth&egrave;que</span></h3>
-    <p><span style="font-weight: 400;">&lt;Cette application n&rsquo;est ici utilis&eacute;e que tr&egrave;s superficiellement pour la recherche des ouvrages. Mais elle a vocation &agrave; &ecirc;tre utilis&eacute;e pour faire une nouvelle application de gestion de biblioth&egrave;que.</span></p>
-    <p><span style="font-weight: 400;">Le plus gros d&eacute;fi de cette partie a &eacute;t&eacute; de recr&eacute;er la base de donn&eacute;e actuelle du club et d&rsquo;y importer toutes les donn&eacute;es.&gt;</span></p>
-    <h4 style="padding-left: 60px;"><span style="color: #003300;"><strong>a/Mod&egrave;les</strong></span></h4>
-    <p><span style="font-weight: 400;">
-        <img
-                src = "{% static 'vitrine/img/BDD_bibliotheque.PNG'%}"
-                width="40%"
-            />
-    </span></p>
-    <ul>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">History</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Editor</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Author</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Serial</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">User</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Book</span></li>
-    <li style="font-weight: 400;"><span style="font-weight: 400;">Author-to-book</span></li>
-    </ul>
-    <p><span style="font-weight: 400;">Pour en savoir plus sur les mod&egrave;les de bibliotheque, tu peux consulter directement ./bibliotheque/models.py</span></p>
-    <h4 style="padding-left: 60px;"><span style="color: #003300;"><strong>b/Vues</strong></span></h4>
-    <ul>
-    <li style="font-weight: 400;"><strong>recherche</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Prend en param&egrave;tre &ldquo;num_page&rdquo;, le num&eacute;ro de page (avec n articles par pages). </span></p>
-    <p><span style="font-weight: 400;">Dispose d&rsquo;un formulaire de recherche de livres; recherche par auteur, titre, genre (BD ou Manga) et par nom de s&eacute;rie.</span></p>
-    <h4 style="padding-left: 60px;"><span style="color: #003300;"><strong>c/Templates</strong></span></h4>
-    <ul>
-    <li style="font-weight: 400;"><strong>recherche</strong></li>
-    </ul>
-    <p><span style="font-weight: 400;">Reprend la construction du formulaire de contact pour la partie formulaire de recherche.</span></p>
-    <p><span style="font-weight: 400;">Reprend la construction de l&rsquo;affichage des articles pour l&rsquo;affichage des r&eacute;sultats et des crit&egrave;res de recherche.</span></p>
+    <div class="documentation">
+        <div class="rapport">
+            <h1 style="text-align: center;"><strong>Rapport de conception</strong></h1>
+            <h3>R&eacute;alisation du projet</h3>
+            <p style="text-align: justify;"><span style="font-weight: 400;">Le club BD/Manga est une association de l&rsquo;INSA Lyon. Le club est propri&eacute;taire d&rsquo;une biblioth&egrave;que de plus de 5200 ouvrages, en lecture libre pour tous. Pour le projet de Web dynamique nous avons d&eacute;cid&eacute; de mettre en place un site web afin de faire conna&icirc;tre cette association.</span></p>
+            <p style="text-align: justify;"><span style="font-weight: 400;">Les objectifs que nous avions d&eacute;fini &eacute;taient les suivants :</span></p>
+            <ul style="text-align: justify;">
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Un site durable (site stable, bien document&eacute; et facile d&rsquo;entretien)</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Vitrine (site joli et ergonomique avec pr&eacute;sentation, actu, info pratiques&hellip;) </span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Outil : moteur de recherche des ouvrages disponibles au club </span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Flux RSS pour suivre les actualit&eacute;s du club</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Responsive design</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Outil : WebApp (mettre notre outil de gestion de biblioth&egrave;que en ligne)</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Interactions entre utilisateurs : syst&egrave;me de notation/recommandation des ouvrages</span></li>
+            </ul>
+            <p style="text-align: justify;"><span style="font-weight: 400;">Nous avons choisi d&rsquo;aborder le projet dans une d&eacute;marche agile. C&rsquo;est-&agrave;-dire que les objectifs cit&eacute;s pr&eacute;c&eacute;demment sont class&eacute;s par ordre de priorit&eacute;. Nous les avons suivi dans l&rsquo;ordre et un &agrave; un. De plus, dans cette m&eacute;thode la vision du client est tr&egrave;s importante. Nous nous sommes donc r&eacute;f&eacute;r&eacute;s &agrave; L&eacute;o, qui est le pr&eacute;sident du club BD/Manga, pour avoir son avis sur ce que l&rsquo;on faisait. Nous avons travaill&eacute; avec Git pour ce projet. Lorsque l&rsquo;objectif en cours &eacute;tait termin&eacute; et accept&eacute; par L&eacute;o, nous l&rsquo;assemblions avec le projet global. Le fait de ne pas travailler directement sur le projet global nous permettait de garder une sauvegarde fonctionnelle au cas o&ugrave; un probl&egrave;me se produirait lors de la r&eacute;alisation des nouvelles parties. La m&eacute;thode agile nous permet aussi de d&eacute;finir des objectifs mais de ne pas forc&eacute;ment tous les r&eacute;aliser. En effet, nous nous sommes plut&ocirc;t attard&eacute; sur la qualit&eacute; au lieu de la quantit&eacute;. Nous pouvons donc ainsi livrer un site web fonctionnel avec les objectifs les plus importants r&eacute;alis&eacute;s : la durabilit&eacute; du site, la vitrine et l&rsquo;outil de moteur de recherche des ouvrages.</span></p>
+            <p style="text-align: justify;"><span style="font-weight: 400;">Les autres objectifs pourront donc &ecirc;tre r&eacute;alis&eacute;s plus tard si nous voulons am&eacute;liorer le site web. En effet, comme nous avons cr&eacute;&eacute; un site durable, les membres du club pourront reprendre notre code et ainsi l&rsquo;am&eacute;liorer selon leurs envies.</span></p>
+            <h3>Organisation du groupe</h3>
+            <p style="text-align: justify;"><span style="font-weight: 400;">Pour r&eacute;aliser le projet nous avons tout d&rsquo;abord suivi des tutoriels afin de se former aux diff&eacute;rents outils que nous allions utiliser. Ensuite, nous nous sommes r&eacute;partis les diff&eacute;rentes parties du site : Back-end/Front-end. A partir de l&agrave; nous nous sommes sp&eacute;cialis&eacute;s dans notre domaine tout en restant connect&eacute;s aux autres parties du projet pour rester coh&eacute;rent dans ce que nous faisions.</span></p>
+            <p style="text-align: justify;"><span style="font-weight: 400;">Lors du d&eacute;veloppement des diff&eacute;rentes parties nous avons fait des tests pour &ecirc;tre s&ucirc;r que tout fonctionnait bien. Par exemple, pour le formulaire de contact nous avons envoy&eacute; plusieurs mails, essay&eacute; toutes les fonctionnalit&eacute;s (bon captcha, mauvais captcha, etc&hellip;) afin de voir si le mail ne s&rsquo;envoyait bien que lorsque tout &eacute;tait correctement renseign&eacute;. Ensuite, nous avons fait de m&ecirc;me pour les commentaires et avons envoy&eacute; une vingtaine de commentaires, plus ou moins long pour diff&eacute;rents articles. Nous avons v&eacute;rifi&eacute; l&rsquo;affichage des commentaires et le dynamisme du formulaire. Un autre exemple de test, pour la pagination dynamique sur les pages &ldquo;Actus&rdquo; et &ldquo;Le festival&rdquo; nous avons cr&eacute;&eacute; plus d&rsquo;une vingtaine d&rsquo;articles pour voir si le changement des pages se faisait correctement.</span></p>
+            <h3>Ce qu&rsquo;il reste &agrave; faire</h3>
+            <ul>
+            <li><span style="font-weight: 400;">Gestion des utilisateurs</span></li>
+            <li><span style="font-weight: 400;">d&eacute;velopper l&rsquo;app de gestion de biblioth&egrave;que</span></li>
+            <li><span style="font-weight: 400;">mettre en place l'upload des images/fichiers</span></li>
+            <li><span style="font-weight: 400;">mettre en place une mise en page sp&eacute;ciale pour imprimer la page "infos pratiques"</span></li>
+            <li><span style="font-weight: 400;">et plein d'autres trucs...</span></li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <h1 style="text-align: center;">Doc technique</h1>
+            <h3>Introduction</h3>
+            <p><span style="font-weight: 400;">Vous trouverez dans cette documentation les d&eacute;tails techniques concernant la structure et le fonctionnement du site WEB du club BD/Mangas de l&rsquo;INSA.</span></p>
+            <p>&nbsp;</p>
+            <div class="sommaire">
+                <h3>Sommaire</h3>
+                <p><span style="font-weight: 400;">I/ Outils techniques utilis&eacute;s</span></p>
+                <p><span style="font-weight: 400;">II/Fonctionnement g&eacute;n&eacute;ral</span></p>
+                <p style="padding-left: 30px;"><span style="font-weight: 400;">1/</span><span style="font-weight: 400;">Vitrine</span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;">a/Mod&egrave;les</span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;">b/Vues</span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;">c/Templates</span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;">d/Point sur la charte graphique du club</span></p>
+                <p style="padding-left: 30px;"><span style="font-weight: 400;">2/</span><span style="font-weight: 400;">Bibliotheque</span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;">a/Mod&egrave;les</span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;">b/Vues</span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;">c/Templates</span></p>
+                <p><span style="font-weight: 400;">III/Conclusion</span></p>
+            </div>
+            <p>&nbsp;</p>
+            <h2>I/ Outils techniques utilis&eacute;s</h2>
+            <p><strong>Backend</strong></p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">r&eacute;alis&eacute; en python 3.7.2 avec le framework Django2 </span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">widgets </span></li>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">ckeditor pour l&rsquo;&eacute;dition d&rsquo;articles</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">django-simple-captcha</span></li>
+            </ul>
+            </ul>
+            <p><strong>Frontend</strong></p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">HTML 5, CSS&hellip;</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">JS (sans framework)</span></li>
+            </ul>
+            <p><strong>Outils de d&eacute;veloppement</strong></p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">PyCharm Pro</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">sqliteStudio</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">git et github (repository public)</span></li>
+            </ul>
+            <p><strong>Fonctionnement de Django</strong></p>
+            <p><a href="https://user.oc-static.com/files/386001_387000/386517.png"><span style="font-weight: 400;"><img src="https://user.oc-static.com/files/386001_387000/386517.png" alt="mod&egrave;le MVT" width="679" height="304" /></span></a></p>
+            <p><span style="font-weight: 400;">Django utilise une variante du mod&egrave;le MVC : le MVT (Mod&egrave;le, View, Template).</span></p>
+            <p><span style="font-weight: 400;">Tout d&rsquo;abord, comme pour n&rsquo;importe quel site web, le serveur &eacute;coute et accepte les requ&ecirc;tes de connexion. Ensuite, il envoie la requ&ecirc;te au contr&ocirc;leur. Celui-ci fait notamment le mapping url et aiguille vers une vue. Les vues sont le centre de la fabrication des pages web en utilisant les mod&egrave;les et les templates. Les mod&egrave;les sont un syst&egrave;me haut niveau de gestion de donn&eacute;es. Les templates permettent la mise en forme de la page. Ils sont &eacute;crits en HTML, CSS et JS. Voici donc un exemple de fonctionnement d&rsquo;une vue : </span></p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">prise en param&egrave;tre des infos de l&rsquo;url</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">recherche ou modification de la base de donn&eacute;es via les mod&egrave;les</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">mise &agrave; disposition de variables aupr&egrave;s du template</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">renvoie du template encapsul&eacute; dans une requ&ecirc;te HTML</span></li>
+            </ul>
+            <p><span style="font-weight: 400;">Notons qu&rsquo;une vue peut interagir avec d&rsquo;autres &eacute;l&eacute;ments, tels que les formulaires ou des m&eacute;thodes contenues dans des packages ext&eacute;rieurs.</span></p>
+            <p>&nbsp;</p>
 
+            <h2>II/Fonctionnement g&eacute;n&eacute;ral</h2>
+            <h3 style="padding-left: 30px; color: #188fcf;">1/Vitrine</h3>
+            <h4 style="padding-left: 60px; color: #007400;">a/Mod&egrave;les</h4>
+            <p><span style="font-weight: 400;">Dans cette partie, le sch&eacute;ma repr&eacute;sente la base de donn&eacute;e tandis que la liste repr&eacute;sente les mod&egrave;les. Pour d&eacute;velopper sur ce site web, seulement la liste de mod&egrave;les.</span></p>
+            <p>&nbsp;</p>
+            <p>
+                <img
+                        src = "{% static 'vitrine/img/BDD_vitrine.PNG'%}"
+                        width="30%"
+                /></p>
+            <p>&nbsp;</p>
+            <p><span style="font-weight: 400;">3 mod&egrave;les (4 tables) :</span></p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Tag</span></li>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">nom_tag: string max 30 caract&egrave;res</span></li>
+            </ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Article</span></li>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">titre: string max 100 caract&egrave;res</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">auteur: string max 50 caract&egrave;res</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">date: datetime, par d&eacute;faut rempli par la date et l&rsquo;heure du serveur au moment du post de l&rsquo;article. NB : les vues sont faites de telle sorte qu&rsquo;un article peut &ecirc;tre &eacute;crit &agrave; l&rsquo;avance. Il ne sera visible qu&rsquo;une fois que la date du serveur sera ult&eacute;rieure &agrave; la date de l&rsquo;article.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">contenu: string infini</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">tag: un ou plusieurs Tag(s) (many-to-many)</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">epingler: un boolean</span></li>
+            </ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Commentaire</span></li>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">id_article: cl&eacute; &eacute;trang&egrave;re faisant le lien avec l&rsquo;article</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">date: datetime, de la date du serveur au moment du post du commentaire.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">contenu: string infini.</span></li>
+            </ul>
+            </ul>
+            <p><span style="font-weight: 400;">Si il y a 4 tables pour trois mod&egrave;les, c&rsquo;est parce que les tables Articles et Tag sont li&eacute;es en many-to-many : un article peut avoir plusieurs tag et un tag peut avoir plusieurs articles. Dans ce cas, Django g&eacute;n&egrave;re automatiquement une table interm&eacute;diaire contenant les 2 cl&eacute;s primaires des 2 tables concern&eacute;es. Pour le d&eacute;veloppeur, cette table est totalement invisible.</span></p>
+            <br>
+            <h4 style="padding-left: 60px; color: #007400;">b/Vue</h4>
+            <p><span style="font-weight: 400;">Les vues renvoient toutes un paquet HTTP contenant la page web compl&egrave;te.</span></p>
+            <ul>
+            <li style="font-weight: 400;"><strong>index</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Il s&rsquo;agit de la vue relative &agrave; l&rsquo;accueil du site.</span></p>
+            <p><span style="font-weight: 400;">Envoie au template les 3 derniers articles en date au template index.html</span></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>actus</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Prend en param&egrave;tre optionnel un nom de tag et le num&eacute;ro de page.</span></p>
+            <p><span style="font-weight: 400;">Envoie n articles au template. Si il s&rsquo;agit de la page 1, ce sont les n derniers articles. Si c&rsquo;est la page 2, ce sont les n articles suivants. Il y a aussi la possibilit&eacute; de choisir un tag pour ne retenir que les articles ayant ce tag.</span></p>
+            <p><span style="font-weight: 400;">Met &eacute;galement &agrave; disposition du template le nombre exact d&rsquo;articles envoy&eacute;s (inf&eacute;rieur ou &eacute;gal &agrave; n) ainsi que le nombre totale de pages (nombre_articles / n).</span></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>article</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Prend en param&egrave;tre &ldquo;id_article&rdquo;, l&rsquo;identifiant de l&rsquo;article &agrave; afficher, ainsi que &ldquo;page_commentaire&rdquo;, le num&eacute;ro de page de commentaire (il y a n commentaires par page).</span></p>
+            <p><span style="font-weight: 400;">Les n commentaires sont fournis dans l&rsquo;ordre de parution, selon la page.</span></p>
+            <p><span style="font-weight: 400;">La page renvoy&eacute;e contient &eacute;galement le formulaire &ldquo;CommentForm&rdquo; de vitrine/forms.py. Ce formulaire contient un champ de texte infini ainsi qu&rsquo;un captcha. Pour l&rsquo;instant, il n&rsquo;y a pas de champ utilisateur car nous n&rsquo;avons pas de gestion de session.</span></p>
+            <p><span style="font-weight: 400;">Dans le cas de l&rsquo;envoi d&rsquo;un commentaire, la page la base de donn&eacute;e est mise &agrave; jour, la page est raffraichie et la variable &ldquo;envoi&rdquo; passe &agrave; True.</span></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>festival</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Prend en param&egrave;tre le num&eacute;ro de la page (avec n articles par page).</span></p>
+            <p><span style="font-weight: 400;">Envoie au template les n derniers articles ayant les tags &ldquo;festival&rdquo; et/ou &ldquo;concours_BD&rdquo;, tri&eacute;es par &eacute;pinglage puis par date. Un article &eacute;pingl&eacute; est un article dont le champ &ldquo;epingler&rdquo; est &eacute;gal &agrave; 1. Ceci permet de mettre en avant certains articles plus importants. Comme dans la page actus, il y a n articles ou moins par page.</span></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Contact</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Utilise le formulaire &ldquo;ContactForm&rdquo;, cod&eacute; dans vitrine/forms.py. Ce formulaire contient 5 champs :</span></p>
+            <ul style="list-style-type: circle;">
+            <li style="font-weight: 400;"><span style="font-weight: 400;">sujet: chaine de maximum 5 caract&egrave;res</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">message: cha&icirc;ne infinie de caract&egrave;re</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">envoyeur: adresse mail</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">renvoi: boolean qui d&eacute;finit si l&rsquo;utilisateur souhaite recevoir une copie du mail sur sa bo&icirc;te mail.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">captcha: g&eacute;n&egrave;re un captcha en utilisant le module django-simple-captcha</span></li>
+            </ul>
+            <p><span style="font-weight: 400;">L&rsquo;envoi du formulaire entraine 2 choses dans la vue :</span></p>
+            <ul style="list-style-type: circle;">
+            <li style="font-weight: 400;"><span style="font-weight: 400;">l&rsquo;envoi du mail de contact directement &agrave; l&rsquo;adresse mail du club BD/Manga</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">l&rsquo;envoi optionnel d&rsquo;une copie de ce mail &agrave; l&rsquo;envoyeur</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">La variable bool&eacute;enne &ldquo;envoi&rdquo; passe &agrave; True pour permettre au template d&rsquo;indiquer &agrave; l&rsquo;utilisateur que l&rsquo;envoi s&rsquo;est bien d&eacute;roul&eacute;.</span></li>
+            </ul>
+            <p><span style="font-weight: 400;">Fonctionnement de l&rsquo;envoi de mails :</span></p>
+            <p><span style="font-weight: 400;">Le site dispose de sa propre adresse mail (</span><a href="mailto:clubbdinsa@hotmail.fr"><span style="font-weight: 400;">clubbdinsa@hotmail.fr</span></a><span style="font-weight: 400;">). Dans les faits, nous n&rsquo;utilisons que son service d&rsquo;envoie (SMTP). Les param&egrave;tres de connexions sont dans ./setup.py, ligne 142. Le mot de passe est stock&eacute; dans le fichier ./passwords.txt, fichier non partag&eacute; dans le git.</span></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Archives</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Prend en param&egrave;tre le num&eacute;ro de page (avec n articles par page).</span></p>
+            <p><span style="font-weight: 400;">Prend &eacute;galement les param&egrave;tres sp&eacute;ciaux d&rsquo;url &ldquo;tag&rdquo;, &ldquo;year&rdquo;, &ldquo;month&rdquo;.</span></p>
+            <p><span style="font-weight: 400;">Utilise le formulaire &ldquo;RechercheForm&rdquo; de vitrine/forms.py. Ce formulaire comporte 3 menus d&eacute;roulants : </span></p>
+            <ul style="list-style-type: circle;">
+            <li style="font-weight: 400;"><span style="font-weight: 400;">tag: comportant tous les tags</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">mois: comportant tous les mois o&ugrave; un article a &eacute;t&eacute; &eacute;crit</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">annee: comportant toutes les ann&eacute;es o&ugrave; un article a &eacute;t&eacute; &eacute;crit.</span></li>
+            </ul>
+            <p><span style="font-weight: 400;">La vue r&eacute;cup&egrave;re les donn&eacute;es fournies par l&rsquo;utilisateur dans les donn&eacute;es et se redirige vers elle-m&ecirc;me avec les bons param&egrave;tres. Ces param&egrave;tres permettent ensuite de faire la recherche appropri&eacute;e dans la base de donn&eacute;es et de sortir les articles correspondants. Comme dans la vue actus, celle-ci envoie au template n articles par page de recherche.</span></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Infos</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Il s'agit de la vue relative &agrave; la page "infos pratiques".</span></p>
+            <p><span style="font-weight: 400;">Fait juste le lien avec le template &ldquo;vitrine/infos.html&rdquo;, qui est une page statique.</span></p>
+            <br>
+            <h4 style="padding-left: 60px; color: #007400;">c/Templates</h4>
+            <p><span style="font-weight: 400;">Afin de cr&eacute;er un site web structur&eacute; et coh&eacute;rent visuellement, nous avons cr&eacute;&eacute; une page base.html qui sert de base &agrave; toutes les autres. Gr&acirc;ce au framework Django il est possible de faire &ldquo;h&eacute;riter&rdquo; des caract&eacute;ristiques de ce documents de r&eacute;f&eacute;rence &agrave; toutes les autres pages web du site. On utilise pour cela les balises du framework Django { % block</span><em><span style="font-weight: 400;"> nom_block</span></em><span style="font-weight: 400;"> %}. On &eacute;vite ainsi de r&eacute;&eacute;crire toute la page &agrave; chaque fois.</span></p>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Base.html</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">On trouve dans ce document comme , dit ci-dessus, les &eacute;l&eacute;ments communs entre les diff&eacute;rentes pages du sites. On y trouve la structure standard d&rsquo;un document HTML (balises &lt;html&gt; &lt;head&gt; &lt;body&gt;).</span></p>
+            <ul style="list-style-type: circle;">
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Dans la balise &lt;head&gt; on retrouve des balises &lt;link&gt;, liens vers les fichiers css associ&eacute;es.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">La balise { % load static %} sert, sur la prochaine balise { % static</span><em><span style="font-weight: 400;"> element</span></em><span style="font-weight: 400;"> %}, &agrave; charger l&rsquo;&eacute;l&eacute;ment depuis la structure du site.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">La balise { % block styleSup %} est ici vide mais pourra &ecirc;tre remplie par les pages int&eacute;grant base.html afin de d&eacute;finir d&rsquo;autres fichiers CSS.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;"><span style="font-weight: 400;">La balisecontient la barre de navigation du site qui est commune &agrave; toutes les pages. Les noms pr&eacute;sents dans les balises &nbsp;{ % url <em><span style="font-weight: 400;"> nom_url</span></em><span style="font-weight: 400;"> %} font r&eacute;f&eacute;rence aux noms symboliques des urls pr&eacute;sents dans le fichier url.py</span></span></span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">La balise { % block content %} est vide et sera remplie par les pages qui &ldquo;h&eacute;riteront&rdquo; de base.html</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">La balise &lt;footer&gt; contient les &eacute;l&eacute;ments que l&rsquo;on retrouve sur toutes les pages en pied de page.</span></li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Pour le restes des pages HTML :</span>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">La balise </span><span style="font-weight: 400;">{ % extends "base.html" %} permet de r&eacute;cup&eacute;rer le code html du fichier base.html</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">On d&eacute;finit dans {\% block styleSup %} un lien vers une feuille de style sp&eacute;cifique &agrave; la page.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">On retrouve &agrave; l&rsquo;int&eacute;rieur de { % block &nbsp;content %} le contenue de la page (variant en fonction de la section du site dans laquelle on se trouve).</span></li>
+            </ul>
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>L&rsquo;accueil (index.html) :</strong>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">La balise {\% for article in last_articles %} permet de r&eacute;cup&eacute;rer les articles pr&eacute;sents dans la variable last_articles , variable qui nous est donn&eacute;e par la view de index. Pour chaque article on vient r&eacute;cup&eacute;rer son id (pour cr&eacute;er le lien vers l&rsquo;article en question), son titre, son contenu (que l&rsquo;on tronque &agrave; 120 mots), son auteur et sa date de publication.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Il y a un lien &ldquo;Plus d&rsquo;articles&rdquo; &nbsp;qui redirige simplement sur la page actu.html</span></li>
+            </ul>
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Actus</strong>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Pour trier les articles par tags, on utilise des balises { % url %} qui font appel &agrave; des urls particuli&egrave;res qui changent les param&egrave;tres de la vue, permettant d&rsquo;afficher les bons articles.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Pour l&rsquo;affiche des articles on utilise le m&ecirc;me principe que index.html avec ici un affichage d&rsquo;articles allant jusqu&rsquo;&agrave; 10.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Pour naviguer entre les pages lorsqu&rsquo;il y plus de 10 articles, On se sert de d&rsquo;un petit code Javascript pr&eacute;sent dans les balises &lt;script&gt;. Ce code cr&eacute;e le lien vers la page suivante et/ou pr&eacute;c&eacute;dente en fonction de la page actuel. Il calcule et affiche les num&eacute;ros de page en fonction du nombre d&rsquo;articles correspondant au tag.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">En loutre, on vient r&eacute;cup&eacute;rer les variables: page, pages_necess et nbr_articles, ce qui permet en combinaison avec la balise {  % if %} d&rsquo;afficher ou non &ldquo;Page pr&eacute;c&eacute;dente&rdquo; et &ldquo;Page suivante&rdquo;, si des articles existent &agrave; ces pages.</span></li>
+            </ul>
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Festival</strong>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Cette page a la m&ecirc;me fonction et la m&ecirc;me construction que actus, mais affiche uniquement les articles en rapport avec le festival de B&eacute;D&eacute;ologie ou le concours BD.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">De plus elle affiche en premier les articles du festival dit &ldquo;&eacute;pingl&eacute;s&rdquo; qui sont d'actualit&eacute; mais cet aspect est g&eacute;r&eacute; par la vue associ&eacute;e.</span></li>
+            </ul>
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Nos ouvrages (recherche.html)</strong>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Cette page est &agrave; part de l&rsquo;application dite &ldquo;vitrine&rdquo;, elle se situe dans une autre application; &ldquo;biblioth&egrave;que&rdquo;.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Elle sert de moteur de recherche, afin de trouver si un ouvrage est pr&eacute;sent ou non dans le club.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Elle utilise un formulaire associ&eacute; &agrave; la page (balise {{form.as_p}} qui est d&eacute;finit dans le fichier forms.py, qui fait le lien avec la BDD.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Pour le r&eacute;sultat de la recherche on utilise le m&ecirc;me principe que actus.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Contact</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">On utilise ici un formulaire, mais contrairement &agrave; &ldquo;nos ouvrages&rdquo;, il est &eacute;crit directement dans le fichier HTML afin d&rsquo;avoir un meilleur contr&ocirc;le dessus en CSS pour le rendre plus esth&eacute;tique.</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Le bouton &ldquo;Envoyer&rdquo; va d&eacute;clencher une requ&ecirc;te que la view va traiter pour envoyer l&rsquo;email au club BD/Mangas. </span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">De plus, une fois ce traitement effectu&eacute;, la variable &ldquo;envoi&rdquo; change, ce qui affiche &agrave; l&rsquo;utilisateur que le message &agrave; bien &eacute;t&eacute; envoy&eacute;.</span></li>
+            </ul>
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Archives</strong>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Cela suit exactement le m&ecirc;me sch&eacute;ma que &ldquo;Nos ouvrages&rdquo;, mais on r&eacute;pertorie ici non pas les ouvrages, mais tous les articles publi&eacute;s par le club.</span></li>
+            </ul>
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+            <ul>
+            <li style="font-weight: 400;"><strong>Infos pratiques</strong>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Page HTML basique contenant uniquement quelques informations concernant le club.</span></li>
+            </ul>
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+            <h4 style="padding-left: 60px; color: #007400;">d/Point sur la charte graphique du club</h4>
+            <p><strong>POLICE</strong></p>
+            <p><span style="font-weight: 400;">D&eacute;clinaisons de Montserrat : </span><a href="http://fr.allfont.net/download/montserrat/"><span style="font-weight: 400;"><a>http://fr.allfont.net/download/montserrat/</a></span></a></p>
+            <p>&nbsp;</p>
+            <p><strong>COULEURS</strong></p>
+            <h3><strong>gris : </strong><span style="font-weight: 400;">#000000, #393939, #777777, #ffffff</span></h3>
+            <h3><strong>oranges : </strong><span style="font-weight: 400;">#c22a2d, #cf4b2a, #de7328, #e68a26</span></h3>
+            <p>&nbsp;</p>
+            <h3 style="padding-left: 30px; color: #188fcf;">2/biblioth&egrave;que</h3>
+            <p><span style="font-weight: 400;">&lt;Cette application n&rsquo;est ici utilis&eacute;e que tr&egrave;s superficiellement pour la recherche des ouvrages. Mais elle a vocation &agrave; &ecirc;tre utilis&eacute;e pour faire une nouvelle application de gestion de biblioth&egrave;que.</span></p>
+            <p><span style="font-weight: 400;">Le plus gros d&eacute;fi de cette partie a &eacute;t&eacute; de recr&eacute;er la base de donn&eacute;e actuelle du club et d&rsquo;y importer toutes les donn&eacute;es.&gt;</span></p>
+            <br>
+            <h4 style="padding-left: 60px; color: #007400;">a/Mod&egrave;les</h4>
+            <p><span style="font-weight: 400;">
+                <img
+                        src = "{% static 'vitrine/img/BDD_bibliotheque.PNG'%}"
+                        width="40%"
+                    />
+            </span></p>
+            <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">History</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Editor</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Author</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Serial</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">User</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Book</span></li>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Author-to-book</span></li>
+            </ul>
+            <p><span style="font-weight: 400;">Pour en savoir plus sur les mod&egrave;les de bibliotheque, tu peux consulter directement ./bibliotheque/models.py</span></p>
+            <br>
+            <h4 style="padding-left: 60px; color: #007400;">b/Vues</h4>
+            <ul>
+            <li style="font-weight: 400;"><strong>recherche</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Prend en param&egrave;tre &ldquo;num_page&rdquo;, le num&eacute;ro de page (avec n articles par pages). </span></p>
+            <p><span style="font-weight: 400;">Dispose d&rsquo;un formulaire de recherche de livres; recherche par auteur, titre, genre (BD ou Manga) et par nom de s&eacute;rie.</span></p>
+            <br>
+            <h4 style="padding-left: 60px; color: #007400;">c/Templates</h4>
+            <ul>
+            <li style="font-weight: 400;"><strong>recherche</strong></li>
+            </ul>
+            <p><span style="font-weight: 400;">Reprend la construction du formulaire de contact pour la partie formulaire de recherche.</span></p>
+            <p><span style="font-weight: 400;">Reprend la construction de l&rsquo;affichage des articles pour l&rsquo;affichage des r&eacute;sultats et des crit&egrave;res de recherche.</span></p>
+        </div>
+    </div>
 {% endblock %}
