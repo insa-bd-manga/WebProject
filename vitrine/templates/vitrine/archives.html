@@ -12,11 +12,11 @@
             <div class="parametres-recherche">
                 <h1 class="titres">Paramètres de recherche </h1>
 
+                <!-Formulaire de recherche-->
                 <form action="{% url "archives" num_page%}" method="post">
                         {% csrf_token %}<!--Permet de sécuriser le POST -->
                         {{ form.as_p }}
                         <input type="submit" value="Rechercher" />
-
                 </form>
             </div>
 

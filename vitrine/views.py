@@ -207,13 +207,13 @@ def archives(request, num_page=0):
         requete_annee = form.cleaned_data.get('annee')
 
         if requete_tag==None:
-            requete_tag = tag_URL
+            requete_tag = ""
 
         if requete_mois is None or requete_mois == "":
-            requete_mois = month_URL
+            requete_mois = ""
 
         if requete_annee is None or requete_annee == "":
-            requete_annee = year_URL
+            requete_annee = ""
         return redirect("/archives/{}?tag={}&year={}&month={}".format(num_page, requete_tag, requete_annee, requete_mois))
 
     else:
