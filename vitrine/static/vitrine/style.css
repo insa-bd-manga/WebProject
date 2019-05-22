@@ -3,7 +3,7 @@ body {
 	background-color: #f1f1f1;
 }
 
-ul {
+.navi {
 	z-index: 1;
   list-style-type: none;
   margin: 0;
@@ -15,11 +15,11 @@ ul {
   width: 100%;
 }
 
-li {
+.navi li {
   float: left;
 }
 
-li a {
+.navi li a {
   display: block;
   color: white;
   text-align: center;
