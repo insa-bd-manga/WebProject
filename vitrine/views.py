@@ -17,6 +17,7 @@ from django.utils import timezone
 from .forms import ContactForm, CommentForm, RechercheForm
 
 from math import *
+import time
 
 from django.contrib.auth.decorators import login_required
 
@@ -107,15 +108,9 @@ def article(request, id_article=1, page_commentaire=0):
 
     :return paquet http contenant la page"""
 
+
     # acquisition de l'article
     article = get_object_or_404(Article, id=id_article)
-    # acquisition des 50 derniers commentaires
-    n = 10
-    commentaires = Commentaire.objects.filter(id_article=id_article).order_by("date")
-    nbr_comms = len(commentaires)
-    pages_comms_necessaires = ceil((nbr_comms / 10)) - 1
-    commentaires = commentaires[n*(page_commentaire):n*(page_commentaire+1)]
-
 
     # formulaire de commentaire
     envoi = False
@@ -129,6 +124,18 @@ def article(request, id_article=1, page_commentaire=0):
 
         # si envoie réussi
         envoi = True
+
+
+
+    # acquisition des 10 derniers commentaires
+    n = 10
+    commentaires = Commentaire.objects.filter(id_article=id_article).order_by("date")
+    nbr_comms = len(commentaires)
+    pages_comms_necessaires = ceil((nbr_comms / 10)) - 1
+    commentaires = commentaires[n*(page_commentaire):n*(page_commentaire+1)]
+
+
+
 
     return render(request, 'vitrine/article.html', locals())
 
