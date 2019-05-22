@@ -18,6 +18,12 @@ from .forms import ContactForm, CommentForm, RechercheForm
 
 from math import *
 
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def doc(request):
+    return render(request, 'vitrine/documentation.html')
+
 def index(request):
     """l'index est la page d'accueil du site
 
