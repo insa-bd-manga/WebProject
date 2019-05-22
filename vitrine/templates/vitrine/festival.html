@@ -26,7 +26,7 @@
         {#  Début de la partie qui Sert à naviguer entre les pages #}
         <div class="pages">{% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
             <span id="nb_pages"></span>
-            {% if page < pages_necess  %}<a id="next_page" href="">Page suivante</a>{% endif %}
+            {% if page < pages_necessaires  %}<a id="next_page" href="">Page suivante</a>{% endif %}
         </div>
 
     </div>
@@ -78,12 +78,12 @@
 
         {#  Changement à proprement dit du lien #}
         if (page_suivante != null){
-            page_suivante.href = "/actus/" + tag_page + num_page_suivante;
+            page_suivante.href = "/festival/"  + num_page_suivante;
         }
 
 
         if (page_precedente!=null){
-            page_precedente.href="/actus/"+tag_page+num_page_precedente;
+            page_precedente.href="/festival/"+num_page_precedente;
         }
 
     </script>
