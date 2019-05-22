@@ -215,9 +215,7 @@ form textarea {
 /***************************************************************************************************/
 /* Gère le style du scroll et la taille de la div corps*/
 .corps{
-  /*width: 600px;*/
   margin: auto;
-  /*height: 600px;*/
   overflow-y: visible;
   overflow-x: hidden;
 }
@@ -239,6 +237,9 @@ form textarea {
 .corps::-webkit-scrollbar-thumb:hover {
   background: rgba(29, 0, 251, 0.59);
 }
+
+
+
 /***********************************************************************************/
 .position_captcha{
   margin-top: 2em;
@@ -308,4 +309,27 @@ form textarea {
 @-moz-keyframes slideDown {
     0%, 100% { -moz-transform: translateY(-50px); }
     10%, 90% { -moz-transform: translateY(0px); }
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* partie pour les pages */
+
+
+.pages{
+    text-align: center;
+    font-family: 'Montserrat', arial;
+    font-size: 18px;
+}
+
+.pages a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+.pages > a:focus, .pages > a:hover{
+    text-decoration: none;
+    color: #de7328;
 }
