@@ -1,3 +1,20 @@
+
+.entete2-content.img {
+	padding: 0px;
+    width:100%;
+}
+
+.entete2-content {
+    marging:100px;
+    background-image: url('festival3.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    height: 700px;
+}
+
+
+
 .description-actu{
     text-align: center;
 }

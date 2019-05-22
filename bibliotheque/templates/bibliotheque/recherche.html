@@ -10,7 +10,7 @@
 
 
 
-    <div class="formulaire">
+    <div class="formulaire" style="margin-top: 70px">
         <h1 class="titres">Rechercher un livre</h1>
         <form action="{% url "recherche" num_page%}" method="post">
             {% csrf_token %}<!--Permet de sécuriser le POST -->
@@ -18,9 +18,7 @@
             <div class="half left">
                 <select class="choix-genre">
                         {% for genre in form.choix_genre %}
-
                             <option value="{{ genre.0 }}">{{ genre.1 }}</option>
-
                         {% endfor %}
                 </select>
                 <p><input id="id_auteur" type="text" name="auteur" maxlength="40" placeholder="Auteur"></p>
@@ -37,6 +35,7 @@
 
    <div class="global">
         <div class="criteres">
+
             <h1 class="titres">Recherche actuelle</h1>
             {% if genre == "b" %}
                 <span class="texte_recherche"> Genre </span>: BD<br>
@@ -55,14 +54,22 @@
 
         <div class="resultats">
             <h1 class="titres">Résultats</h1>
+            <table id="Resultats_de_recherche">
+                <tr>
+                    <th>Titre</th>
+                    <th>Référence</th>
+                </tr>
             {% for livre in query %}
-                <span class = "texte_recherche">{{ livre.title }}, par {{ livre.id.first.name }}. Référence : {{ livre.reference }}</span>
-                <br>
+                <tr>
+                    <td>{{ livre.title }}</td>
+                    <td>{{ livre.reference }}</td>
+                </tr>
             {% empty %}
                 <p>Aucun livre trouvé</p>
                 <p>¯\_(ツ)_/¯</p>
 
             {% endfor %}
+            </table>
         </div>
 
     </div>
