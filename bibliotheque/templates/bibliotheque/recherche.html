@@ -8,33 +8,34 @@
 
 {% block content %}
 
-    <div class="global">
 
-        <div class="formulaire">
-            <h1 class="titres">Rechercher un livre</h1>
-            <form action="{% url "recherche" num_page%}" method="post">
-                {% csrf_token %}<!--Permet de sécuriser le POST -->
 
-                <div class="half left">
-                    <select class="choix-genre">
-                            {% for genre in form.choix_genre %}
-                                <option value="{{ genre.0 }}">{{ genre.1 }}</option>
-                            {% endfor %}
-                    </select>
-                    <p><input id="id_auteur" type="text" name="auteur" maxlength="40" placeholder="Auteur"></p>
-                </div>
+    <div class="formulaire">
+        <h1 class="titres">Rechercher un livre</h1>
+        <form action="{% url "recherche" num_page%}" method="post">
+            {% csrf_token %}<!--Permet de sécuriser le POST -->
 
-                <div class="half right">
-                    <p><input id="id_titre" type="text" name="titre" maxlength="100" placeholder="Titre"></p>
-                    <p><input id="id_serie" type="text" name="serie" maxlength="100" placeholder="Série"></p>
-                </div>
-                <input id="input-chercher" type="submit" value="Chercher" />
-            </form>
-            <br>
-        </div>
+            <div class="half left">
+                <select class="choix-genre">
+                        {% for genre in form.choix_genre %}
 
-        <hr>
+                            <option value="{{ genre.0 }}">{{ genre.1 }}</option>
 
+                        {% endfor %}
+                </select>
+                <p><input id="id_auteur" type="text" name="auteur" maxlength="40" placeholder="Auteur"></p>
+            </div>
+
+            <div class="half right">
+                <p><input id="id_titre" type="text" name="titre" maxlength="100" placeholder="Titre"></p>
+                <p><input id="id_serie" type="text" name="serie" maxlength="100" placeholder="Série"></p>
+            </div>
+            <input id="input-chercher" type="submit" value="Chercher" />
+        </form>
+        <br>
+    </div>
+
+   <div class="global">
         <div class="criteres">
             <h1 class="titres">Recherche actuelle</h1>
             {% if genre == "b" %}
