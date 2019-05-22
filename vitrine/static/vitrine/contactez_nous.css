@@ -15,7 +15,7 @@ h1 {
   text-align: center;
   color: #a8a8a8;
   text-shadow: 1px 1px 0 white;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat Bold', arial;
 }
 .position_captcha .captcha {
   position: relative;
@@ -56,7 +56,7 @@ form {
 }
 
 .helptext{
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   font-size: small;
 }
 
@@ -76,7 +76,7 @@ form {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #22f34b;
+  background-color: #de7328;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -113,7 +113,7 @@ form input, form textarea{
   display: block;
   width: 100%;
   margin-top: 1em;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -128,7 +128,7 @@ form input:focus, form textarea:focus {
 }
 form #input-submit {
   color: white;
-  background: #22f34b;
+  background: #de7328;
   cursor: pointer;
 }
 form #input-submit:hover {
@@ -193,11 +193,11 @@ form textarea {
   top: 7%;
   left: 25%;
   right: 25%;
-  background: #2afd67;
+  background: #de7328;
   text-align: center;
   line-height: 2.5;
   overflow: hidden;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   -webkit-box-shadow: 0 0 5px black;
   -moz-box-shadow:    0 0 5px black;
   box-shadow:         0 0 5px black;
