@@ -54,7 +54,7 @@
             </div>
             <div class="half right cf">
                 <p><textarea id="id_message" rows="10" cols="40" name="message" placeholder="Message"></textarea></p>
-                <p class="position_captcha">{{ form.captcha}}</p>
+                <p class="position_captcha">{{ form.captcha}}{{ form.captcha.errors }}</p>
             </div>
             <input type="submit" value="Envoyer" id="input-submit" />
         </form>

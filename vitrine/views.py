@@ -87,7 +87,6 @@ def article(request, id_article=1, page_commentaire=0):
 
     # formulaire de commentaire
     envoi = False
-
     form = CommentForm(request.POST or None)
     if form.is_valid():
         new_com = Commentaire()
