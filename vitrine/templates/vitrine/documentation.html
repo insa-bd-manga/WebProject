@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block titreOnglet %} Documentation {% endblock %}
+{% load static %}
 {%  block styleSup %}
-    {% load static %}
     <link href="{% static 'vitrine/documentation.css'%}" rel="stylesheet"> {% endblock %}
 
 
@@ -41,23 +41,26 @@
             <h3>Introduction</h3>
             <p><span style="font-weight: 400;">Vous trouverez dans cette documentation les d&eacute;tails techniques concernant la structure et le fonctionnement du site WEB du club BD/Mangas de l&rsquo;INSA.</span></p>
             <p>&nbsp;</p>
+
+            <!-SOMMAIRE-->
             <div class="sommaire">
                 <h3>Sommaire</h3>
-                <p><span style="font-weight: 400;">I/ Outils techniques utilis&eacute;s</span></p>
-                <p><span style="font-weight: 400;">II/Fonctionnement g&eacute;n&eacute;ral</span></p>
-                <p style="padding-left: 30px;"><span style="font-weight: 400;">1/</span><span style="font-weight: 400;">Vitrine</span></p>
-                <p style="padding-left: 60px;"><span style="font-weight: 400;">a/Mod&egrave;les</span></p>
-                <p style="padding-left: 60px;"><span style="font-weight: 400;">b/Vues</span></p>
-                <p style="padding-left: 60px;"><span style="font-weight: 400;">c/Templates</span></p>
-                <p style="padding-left: 60px;"><span style="font-weight: 400;">d/Point sur la charte graphique du club</span></p>
-                <p style="padding-left: 30px;"><span style="font-weight: 400;">2/</span><span style="font-weight: 400;">Bibliotheque</span></p>
-                <p style="padding-left: 60px;"><span style="font-weight: 400;">a/Mod&egrave;les</span></p>
-                <p style="padding-left: 60px;"><span style="font-weight: 400;">b/Vues</span></p>
-                <p style="padding-left: 60px;"><span style="font-weight: 400;">c/Templates</span></p>
-                <p><span style="font-weight: 400;">III/Conclusion</span></p>
+                <p><span style="font-weight: 400;"><a href="#I">I/Outils techniques utilis&eacute;s</a> </span></p>
+                <p><span style="font-weight: 400;"><a href="#II">II/Fonctionnement g&eacute;n&eacute;ral</a></span></p>
+                <p style="padding-left: 30px;"><span style="font-weight: 400;"></span><span style="font-weight: 400;"><a href="#II/1">1/Vitrine</a></span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;"><a href="#1/a">a/Mod&egrave;les</a></span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;"><a href="#1/b">b/Vues</a></span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;"><a href="#1/c">c/Templates</a></span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;"><a href="#1/d">d/Point sur la charte graphique du club</a></span></p>
+                <p style="padding-left: 30px;"><span style="font-weight: 400;"></span><span style="font-weight: 400;"><a href="#II/2">2/Bibliotheque</a></span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;"><a href="#2/a">a/Mod&egrave;les</a></span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;"><a href="#2/b">b/Vues</a></span></p>
+                <p style="padding-left: 60px;"><span style="font-weight: 400;"><a href="#2/c">c/Templates</a></span></p>
             </div>
+
+
             <p>&nbsp;</p>
-            <h2>I/ Outils techniques utilis&eacute;s</h2>
+            <h2 id="I">I/ Outils techniques utilis&eacute;s</h2>
             <p><strong>Backend</strong></p>
             <ul>
             <li style="font-weight: 400;"><span style="font-weight: 400;">r&eacute;alis&eacute; en python 3.7.2 avec le framework Django2 </span></li>
@@ -91,15 +94,16 @@
             <p><span style="font-weight: 400;">Notons qu&rsquo;une vue peut interagir avec d&rsquo;autres &eacute;l&eacute;ments, tels que les formulaires ou des m&eacute;thodes contenues dans des packages ext&eacute;rieurs.</span></p>
             <p>&nbsp;</p>
 
-            <h2>II/Fonctionnement g&eacute;n&eacute;ral</h2>
-            <h3 style="padding-left: 30px; color: #188fcf;">1/Vitrine</h3>
-            <h4 style="padding-left: 60px; color: #007400;">a/Mod&egrave;les</h4>
+            <h2 id="II">II/Fonctionnement g&eacute;n&eacute;ral</h2>
+            <h3 id="II/1" style="padding-left: 30px; color: #188fcf;">1/Vitrine</h3>
+            <p>La vitrine, comme son nom l'indique est la partie la plus visible du site. Elle doit être jolie, pratique et facile à utiliser. Elle regroupe toutes les fonctions de base d'un site web, qui sont détaillées ci-dessous.</p>
+            <h4 id="1/a" style="padding-left: 60px; color: #007400;">a/Mod&egrave;les</h4>
             <p><span style="font-weight: 400;">Dans cette partie, le sch&eacute;ma repr&eacute;sente la base de donn&eacute;e tandis que la liste repr&eacute;sente les mod&egrave;les. Pour d&eacute;velopper sur ce site web, seulement la liste de mod&egrave;les.</span></p>
             <p>&nbsp;</p>
             <p>
                 <img
                         src = "{% static 'vitrine/img/BDD_vitrine.PNG'%}"
-                        width="30%"
+                        width="40%"
                 /></p>
             <p>&nbsp;</p>
             <p><span style="font-weight: 400;">3 mod&egrave;les (4 tables) :</span></p>
@@ -126,7 +130,7 @@
             </ul>
             <p><span style="font-weight: 400;">Si il y a 4 tables pour trois mod&egrave;les, c&rsquo;est parce que les tables Articles et Tag sont li&eacute;es en many-to-many : un article peut avoir plusieurs tag et un tag peut avoir plusieurs articles. Dans ce cas, Django g&eacute;n&egrave;re automatiquement une table interm&eacute;diaire contenant les 2 cl&eacute;s primaires des 2 tables concern&eacute;es. Pour le d&eacute;veloppeur, cette table est totalement invisible.</span></p>
             <br>
-            <h4 style="padding-left: 60px; color: #007400;">b/Vue</h4>
+            <h4 id="1/b" style="padding-left: 60px; color: #007400;">b/Vue</h4>
             <p><span style="font-weight: 400;">Les vues renvoient toutes un paquet HTTP contenant la page web compl&egrave;te.</span></p>
             <ul>
             <li style="font-weight: 400;"><strong>index</strong></li>
@@ -194,7 +198,7 @@
             <p><span style="font-weight: 400;">Il s'agit de la vue relative &agrave; la page "infos pratiques".</span></p>
             <p><span style="font-weight: 400;">Fait juste le lien avec le template &ldquo;vitrine/infos.html&rdquo;, qui est une page statique.</span></p>
             <br>
-            <h4 style="padding-left: 60px; color: #007400;">c/Templates</h4>
+            <h4 id="1/c" style="padding-left: 60px; color: #007400;">c/Templates</h4>
             <p><span style="font-weight: 400;">Afin de cr&eacute;er un site web structur&eacute; et coh&eacute;rent visuellement, nous avons cr&eacute;&eacute; une page base.html qui sert de base &agrave; toutes les autres. Gr&acirc;ce au framework Django il est possible de faire &ldquo;h&eacute;riter&rdquo; des caract&eacute;ristiques de ce documents de r&eacute;f&eacute;rence &agrave; toutes les autres pages web du site. On utilise pour cela les balises du framework Django { % block</span><em><span style="font-weight: 400;"> nom_block</span></em><span style="font-weight: 400;"> %}. On &eacute;vite ainsi de r&eacute;&eacute;crire toute la page &agrave; chaque fois.</span></p>
             <p>&nbsp;</p>
             <ul>
@@ -280,23 +284,23 @@
             </li>
             </ul>
             <p>&nbsp;</p>
-            <h4 style="padding-left: 60px; color: #007400;">d/Point sur la charte graphique du club</h4>
+            <h4 id="1/d" style="padding-left: 60px; color: #007400;">d/Point sur la charte graphique du club</h4>
             <p><strong>POLICE</strong></p>
             <p><span style="font-weight: 400;">D&eacute;clinaisons de Montserrat : </span><a href="http://fr.allfont.net/download/montserrat/"><span style="font-weight: 400;"><a>http://fr.allfont.net/download/montserrat/</a></span></a></p>
             <p>&nbsp;</p>
             <p><strong>COULEURS</strong></p>
-            <h3><strong>gris : </strong><span style="font-weight: 400;">#000000, #393939, #777777, #ffffff</span></h3>
-            <h3><strong>oranges : </strong><span style="font-weight: 400;">#c22a2d, #cf4b2a, #de7328, #e68a26</span></h3>
+            <p><strong>gris : </strong><span style="font-weight: 400;">#000000, #393939, #777777, #ffffff</span></p>
+            <p><strong>oranges : </strong><span style="font-weight: 400;">#c22a2d, #cf4b2a, #de7328, #e68a26</span></p>
             <p>&nbsp;</p>
-            <h3 style="padding-left: 30px; color: #188fcf;">2/biblioth&egrave;que</h3>
+            <h3 id="II/2" style="padding-left: 30px; color: #188fcf;">2/biblioth&egrave;que</h3>
             <p><span style="font-weight: 400;">&lt;Cette application n&rsquo;est ici utilis&eacute;e que tr&egrave;s superficiellement pour la recherche des ouvrages. Mais elle a vocation &agrave; &ecirc;tre utilis&eacute;e pour faire une nouvelle application de gestion de biblioth&egrave;que.</span></p>
             <p><span style="font-weight: 400;">Le plus gros d&eacute;fi de cette partie a &eacute;t&eacute; de recr&eacute;er la base de donn&eacute;e actuelle du club et d&rsquo;y importer toutes les donn&eacute;es.&gt;</span></p>
             <br>
-            <h4 style="padding-left: 60px; color: #007400;">a/Mod&egrave;les</h4>
+            <h4 id="2/a" style="padding-left: 60px; color: #007400;">a/Mod&egrave;les</h4>
             <p><span style="font-weight: 400;">
                 <img
                         src = "{% static 'vitrine/img/BDD_bibliotheque.PNG'%}"
-                        width="40%"
+                        width="60%"
                     />
             </span></p>
             <ul>
@@ -310,14 +314,14 @@
             </ul>
             <p><span style="font-weight: 400;">Pour en savoir plus sur les mod&egrave;les de bibliotheque, tu peux consulter directement ./bibliotheque/models.py</span></p>
             <br>
-            <h4 style="padding-left: 60px; color: #007400;">b/Vues</h4>
+            <h4 id="2/b" style="padding-left: 60px; color: #007400;">b/Vues</h4>
             <ul>
             <li style="font-weight: 400;"><strong>recherche</strong></li>
             </ul>
             <p><span style="font-weight: 400;">Prend en param&egrave;tre &ldquo;num_page&rdquo;, le num&eacute;ro de page (avec n articles par pages). </span></p>
             <p><span style="font-weight: 400;">Dispose d&rsquo;un formulaire de recherche de livres; recherche par auteur, titre, genre (BD ou Manga) et par nom de s&eacute;rie.</span></p>
             <br>
-            <h4 style="padding-left: 60px; color: #007400;">c/Templates</h4>
+            <h4 id="2/c" style="padding-left: 60px; color: #007400;">c/Templates</h4>
             <ul>
             <li style="font-weight: 400;"><strong>recherche</strong></li>
             </ul>
