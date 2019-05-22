@@ -82,7 +82,7 @@ form input{
 form textarea{
   border: 0;
   outline: 0;
-  padding: 1em;
+  padding-top: 1em;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -101,7 +101,8 @@ form textarea{
 form .message_sent .bas_mes{
   border: 0;
   outline: 0;
-  padding: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
   height: 70%;
   text-align: left;
   word-wrap: break-word; /* petite ligne pour faire en sorte que le texte retourne à la ligne sans depasser du cadre*!*/
@@ -239,32 +240,6 @@ form textarea {
 
 
 
-/* Cas où on n'a plus de 10 articles donc long scroll*/
-.corps2{
-  width: 600px;
-  margin: auto;
-  height: 600px;
-  overflow-y: visible;
-  overflow-x: hidden;
-}
-.corps2::-webkit-scrollbar {
-  width: 10px;
-
-}
-/* Track */
-.corps2::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-/* Handle */
-.corps2::-webkit-scrollbar-thumb {
-  background: rgba(20, 44, 255, 0.27);
-  border-radius: 10px;
-}
-/* Handle on hover */
-.corps2::-webkit-scrollbar-thumb:hover {
-  background: rgba(29, 0, 251, 0.59);
-}
 /***********************************************************************************/
 .position_captcha{
   margin-top: 2em;
