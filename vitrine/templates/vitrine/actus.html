@@ -2,26 +2,30 @@
 {% block titreOnglet %} Actus {% endblock %}
 {%  load static %}
 {% block styleSup %}<link href="{% static 'vitrine/actus.css' %}" rel="stylesheet"> {% endblock  %}
+
 {% block content %}
 
-
     <div class="lesArticles">
-
-
         <div>
             <h1 class="titre-actu"> Actualités </h1>
         </div>
-        <div class="description-actu">Retrouver toutes les actualités,articles et chronoquines publié par le club BD/Mangas !</div>
-        <br/>
-        Trier les articles par :
 
-        <a href="{% url "actus" "divers" %}">Divers</a>,
-        <a href="{% url "actus" "actu" %}">Actus</a>,
-        <a href="{% url "actus" "festival" %}">Festival</a>,
-        <a href="{% url "actus" "chronique" %}">Chronique</a>,
-        <a href="{% url "actus" "concours BD" %}">Concours BD</a>
+        <div class="description-actu">
+            Retrouver toutes les actualités,articles et chronoquines publié par le club BD/Mangas !
+        </div>
         <br/>
-        <br/>
+
+        <div class="tri">
+            Trier les articles par :
+
+            <a href="{% url "actus" "divers" %}">Divers</a>,
+            <a href="{% url "actus" "actu" %}">Actus</a>,
+            <a href="{% url "actus" "festival" %}">Festival</a>,
+            <a href="{% url "actus" "chronique" %}">Chronique</a>,
+            <a href="{% url "actus" "concours BD" %}">Concours BD</a>
+            <br/>
+            <br/>
+        </div>
 
         {% for article in last_articles %}
             <div class= "articles">
@@ -42,7 +46,9 @@
 
     </div>
 
+{% endblock %}
 
+{% block script %}
     <script type="text/javascript">
         var page_suivante = document.getElementById('next_page');
         var page_precedente = document.getElementById('previous_page');

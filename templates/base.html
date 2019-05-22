@@ -19,13 +19,6 @@
 <body>
 
 
-
-    <div class="entete-content">
-        <h3>Club BD Manga<br>
-            INSA Lyon</h3>
-
-    </div>
-
     {% block nav %}
     <ul class = "navi" >
         <li><a class="active" href="{% url "index" %}">Acceuil</a></li>
@@ -39,12 +32,15 @@
 
     {% endblock %}
 
-    <div style="margin-top:30px;">
+    <div style="margin-top:70px">
 
     {% block content %}
     {% endblock %}
 
     </div>
+
+    {% block script %}
+    {% endblock %}
 
 
 {% block footer %}

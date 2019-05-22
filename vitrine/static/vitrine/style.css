@@ -25,6 +25,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+	font-family: 'Montserrat', arial;
 }
 
 li a:hover:not(.active) {
@@ -32,42 +33,11 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #de7328;
 }
-
-
-
-/* Image et texte en haut de page */
-
-.entete-content.img {
-	padding: 0px;
-    width:100%;
-}
-
-.entete-content {
-    background-image: url('livres_rogner.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-top: 40px;
-    height: 400px;
-}
-
-
-.entete-content h3 {
-	position: relative;
-    top: 120px;
-    left: 150px;
-    font-family: 'Montserrat Bold', arial;
-    color: #ffffff;
-    font-size: 35px;
-    text-shadow: 2px 2px 2px #777777;
-
-}
-
 
 
 /* Footer */
-
 .footer-content{
 	background-color: #393939;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -143,7 +113,6 @@ li a:hover:not(.active) {
 
 
 /* Pour que le footer soit responsive */
-
 @media (max-width: 1000px) {
 
 	.footer-content{
