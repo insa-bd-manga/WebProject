@@ -1,22 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
-*,
-*:before,
-*:after {
+.contenue,
+.contenue:before,
+.contenue:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-body {
-  background: #f1f1f1;
-  font-family: 'Merriweather', sans-serif;
-  padding: 1em;
+.contact_bloc{
+  margin-top: 45px;
+  padding-top: 1em;
 }
 
 h1 {
   text-align: center;
   color: #a8a8a8;
   text-shadow: 1px 1px 0 white;
+  font-family: 'Merriweather', sans-serif;
 }
 .position_captcha .captcha {
   position: relative;
@@ -148,7 +147,8 @@ form textarea {
 }
 
 .right {
-  width: 50%;
+  margin-left: 2em;
+  width: 40%;
 }
 
 .left {
@@ -183,5 +183,45 @@ form textarea {
   padding-left: 100px;
   margin-bottom: 12px;
   float:right;
+}
+
+
+.alert {
+  position: absolute;
+  border-radius: 10px;
+  z-index: 101;
+  top: 7%;
+  left: 25%;
+  right: 25%;
+  background: #2afd67;
+  text-align: center;
+  line-height: 2.5;
+  overflow: hidden;
+  font-family: 'Merriweather', sans-serif;
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow:    0 0 5px black;
+  box-shadow:         0 0 5px black;
+}
+
+.closebtn {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 20px;
+  border: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: black;
+}
+
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-50px); }
+    10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-50px); }
+    10%, 90% { -moz-transform: translateY(0px);}
 }
 
