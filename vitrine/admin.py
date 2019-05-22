@@ -48,3 +48,17 @@ class ArticleAdmin(admin.ModelAdmin):
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Tag)
 admin.site.register(Commentaire)
+
+#admin.site.site_header(path('/admin/documentation', views.doc, name='doc'))
+# class MyModelAdmin(admin.ModelAdmin):
+#     def get_urls(self):
+#         urls = super().get_urls()
+#         my_urls = [
+#             path('documentation/', self.documentation),
+#         ]
+#         return my_urls + urls
+#
+#     def documentation(self, request):
+#
+#         return TemplateResponse(request, "documentation.html")
+

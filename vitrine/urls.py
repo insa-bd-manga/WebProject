@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
+from . import admin
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -40,4 +41,6 @@ urlpatterns = [
 
     path('infos', views.infos, name='infos'),
     path('contact', views.contact, name='contact'),
+
+    path('documentation', views.doc, name='doc'),
 ]
