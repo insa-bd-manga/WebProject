@@ -40,12 +40,13 @@ def recherche(request, num_page=0):
         genre = form.cleaned_data["genre"]
         titre = form.cleaned_data["titre"]
         serie = form.cleaned_data["serie"]
+        print("RECHERCHE : ",auteur, genre, titre, serie)
 
     #J'ai conscience que le dernier filtre n'est pas intuitif, la conversion de la BDD laisse quelques traces, certains
     #noms ne sont pas forcément pertinents, mais j'ai pas voulu prendre la liberté de les renommer. Ici, ID correspond aux
     #Auteurs d'un ouvrage. Ca fonctionne, par contre, aucun doute là dessus.
     query = Book.objects.filter(title__icontains=titre).filter(kind__icontains=genre)\
-        .filter(Q(serial_id__title__icontains=serie) | Q(serial_id=None)).order_by("title").distinct()
+        .filter(serial_id__title__icontains=serie).order_by("title").distinct()
     nombre_reponses=len(query)
     pages_necessaires = ceil((nombre_reponses/n))-1
     query = query[n * (num_page):n * (num_page + 1)]

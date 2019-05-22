@@ -16,11 +16,7 @@
             {% csrf_token %}<!--Permet de sécuriser le POST -->
 
             <div class="half left">
-                <select class="choix-genre">
-                        {% for genre in form.choix_genre %}
-                            <option value="{{ genre.0 }}">{{ genre.1 }}</option>
-                        {% endfor %}
-                </select>
+                <p>{{ form.genre }}</p>
                 <p><input id="id_auteur" type="text" name="auteur" maxlength="40" placeholder="Auteur"></p>
             </div>
 
@@ -57,11 +53,15 @@
             <table id="Resultats_de_recherche">
                 <tr>
                     <th>Titre</th>
+                    <th>Éditeur</th>
+                    <th>Série</th>
                     <th>Référence</th>
                 </tr>
             {% for livre in query %}
                 <tr>
                     <td>{{ livre.title }}</td>
+                    <td>{{ livre.editor.name|default:""}}</td>
+                    <td>{{ livre.serial_id.title }}</td>
                     <td>{{ livre.reference }}</td>
                 </tr>
             {% empty %}
