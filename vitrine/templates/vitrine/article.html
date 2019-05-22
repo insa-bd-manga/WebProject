@@ -24,7 +24,7 @@
     <!--COMMENTAIRES -->
     <div class="commentaires">
         <h1>Commentaires</h1>
-        <div class="corps">
+        <div class="corps" id="pour_scroll">
             {% for com in commentaires %}
                 <form>
                     <label class="message_sent">
@@ -36,6 +36,7 @@
                     </label>
                 </form>
             {% endfor %}
+
         </div>
         <!--#TODO: ajouter un long scroll pour afficher les 10 com suivants-->
 
@@ -81,13 +82,59 @@
 
         {% endif %}
 
-
+    </div>
 
     {#kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk#}
 
 
+            {#  Début de la partie qui Sert à naviguer entre les pages #}
 
-    </div>
+        <div class="pages">{% if page_commentaire != 0 %}<a id="previous_page" href="">Commentaires précédents</a> {% endif %}
+            <span id="nb_pages"></span>
+            {% if page_commentaire < pages_comms_necessaires  %}<a id="next_page" href="">Commentaires suivants</a>{% endif %}
+        </div>
+
+
+
+
+
+    <script type="text/javascript">
+
+        var page_suivante = document.getElementById('next_page');
+        var page_precedente = document.getElementById('previous_page');
+        var nbr_pages = document.getElementById("nb_pages");
+
+
+        var text = '';
+        for(var i=1;i<= ({{ pages_comms_necessaires }}+1) ; i++) {
+
+            text += "<a href='/article/{{ id_article }}/"+(i-1)+"'>" + i + " </a> ";
+
+
+
+        }
+
+        text+='';
+        nbr_pages.innerHTML = text;
+
+        var num_page_suivante;
+        var num_page_precedente;
+
+        num_page_suivante = {{ page_commentaire }} +1;
+        num_page_precedente = {{ page_commentaire }} -1;
+
+        if (page_suivante != null){
+            page_suivante.href = "/article/" + {{ id_article }} + "/" + num_page_suivante;
+        }
+
+
+        if (page_precedente!=null){
+            page_precedente.href="/article/"+ {{ id_article }} + "/" +num_page_precedente;
+        }
+
+
+    </script>
+
 {% endblock %}
 
 

@@ -214,9 +214,7 @@ form textarea {
 /***************************************************************************************************/
 /* Gère le style du scroll et la taille de la div corps*/
 .corps{
-  /*width: 600px;*/
   margin: auto;
-  /*height: 600px;*/
   overflow-y: visible;
   overflow-x: hidden;
 }
@@ -238,6 +236,35 @@ form textarea {
 .corps::-webkit-scrollbar-thumb:hover {
   background: rgba(29, 0, 251, 0.59);
 }
+
+
+
+/* Cas où on n'a plus de 10 articles donc long scroll*/
+.corps2{
+  width: 600px;
+  margin: auto;
+  height: 600px;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+.corps2::-webkit-scrollbar {
+  width: 10px;
+
+}
+/* Track */
+.corps2::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+.corps2::-webkit-scrollbar-thumb {
+  background: rgba(20, 44, 255, 0.27);
+  border-radius: 10px;
+}
+/* Handle on hover */
+.corps2::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 0, 251, 0.59);
+}
 /***********************************************************************************/
 .position_captcha{
   margin-top: 2em;
@@ -253,7 +280,7 @@ form textarea {
 }
 .position_captcha input {
   margin-top: 0;
-  width: 85%;
+  width: 75%;
   margin-left: 1%;
 }
 /***********************************************************************************************/
@@ -307,4 +334,27 @@ form textarea {
 @-moz-keyframes slideDown {
     0%, 100% { -moz-transform: translateY(-50px); }
     10%, 90% { -moz-transform: translateY(0px); }
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* partie pour les pages */
+
+
+.pages{
+    text-align: center;
+    font-family: 'Montserrat', arial;
+    font-size: 18px;
+}
+
+.pages a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+.pages > a:focus, .pages > a:hover{
+    text-decoration: none;
+    color: #de7328;
 }
