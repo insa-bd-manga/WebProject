@@ -46,7 +46,7 @@
 
 .commentaires {
   background: #f1f1f1;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   padding: 1em;
 }
 
@@ -72,7 +72,7 @@ form input{
   display: block;
   width: 100%;
   margin-top: 1em;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@ form input{
 form textarea{
   border: 0;
   outline: 0;
-  padding: 1em;
+  padding-top: 1em;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -90,7 +90,7 @@ form textarea{
   width: 100%;
   margin-top: 0;
   margin-bottom: 2em;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -101,7 +101,8 @@ form textarea{
 form .message_sent .bas_mes{
   border: 0;
   outline: 0;
-  padding: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
   height: 70%;
   text-align: left;
   word-wrap: break-word; /* petite ligne pour faire en sorte que le texte retourne à la ligne sans depasser du cadre*!*/
@@ -111,7 +112,7 @@ form .message_sent .bas_mes{
   display: block;
   width: 100%;
   margin-top: 0;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -127,8 +128,8 @@ form .message_sent .haut_mes{ /* donne le style du bloc fils du haut pour le blo
   display: block;
   width: 100%;
   margin-top: 0;
-  font-family: 'Merriweather', sans-serif;
-  background-color: rgba(34,243,75,0.18);
+  font-family: 'Montserrat', arial;
+  background-color: rgba(255, 133, 49, 0.6);
   /*font-size: small;*/
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -147,7 +148,7 @@ form .cat_message{
   width: 100%;
   margin-top: 4em;
   margin-bottom: 0;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Montserrat', arial;
   background-color: rgba(57, 98, 97, 0.2);
   font-size: large;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -164,7 +165,7 @@ form input:focus, form textarea:focus{
 }
 form #input-submit {
   color: white;
-  background: #22f34b;
+  background: #de7328;
   cursor: pointer;
 }
 form #input-submit:hover {
@@ -253,8 +254,8 @@ form textarea {
 }
 .position_captcha input {
   margin-top: 0;
-  width: 85%;
-  margin-left: 1%;
+  width: 75%;
+  margin-left: 2%;
 }
 /***********************************************************************************************/
 
@@ -278,7 +279,7 @@ form textarea {
   top: 7%;
   left: 25%;
   right: 25%;
-  background: #2afd67;
+  background: #de7328;
   text-align: center;
   line-height: 2.5;
   overflow: hidden;
