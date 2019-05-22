@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
+from bibliotheque import views as biblio_views
 from . import admin
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('recherche-ouvrages', views.rechercheOuvrages, name='recherche-ouvrages'),
+    path('recherche-ouvrages', biblio_views.recherche, name='recherche-ouvrages'),
 
 #   path('ouvrage/<str:auteur>/<str:titre>/<int:num_page>', views.ouvrage, name='ouvrage'),
 

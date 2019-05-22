@@ -192,7 +192,7 @@ def archives(request, num_page=0):
         if month_URL is None:
             month_URL = ""
 
-    n = 100 #nombre d'articles par page
+    n = 10 #nombre d'articles par page
 
     # Récupération des n articles avec le tag et la date spécifiés
     query = Article.objects.filter(date__year__icontains=year_URL).filter(date__month__icontains=month_URL)\

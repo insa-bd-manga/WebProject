@@ -22,23 +22,23 @@
     {% block nav %}
     {% if user.is_authenticated %}
         <ul class = "navi" >
-            <li><a class="active" href="{% url "index" %}">Acceuil</a></li>
+            <li><a class="active" href="{% url "index" %}">Accueil</a></li>
             <li><a href="{% url "actus" %}">Actus</a></li>
             <li><a href="{% url "festival" %}">Le festival</a></li>
-            <li><a href="#ouvrages">Nos Ouvrages</a></li>
-            <li><a href="{% url "contact" %}">Contact</a></li>
+            <li><a href="{% url "recherche-ouvrages" %}">Nos Ouvrages</a></li>
             <li><a href="{% url "archives" %}">Archives</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
             <li><a href="{%  url "infos" %}">Infos pratiques</a></li>
             <li><a href="{% url "doc" %}">Documentation</a></li>
         </ul>
     {% else %}
         <ul class = "navi" >
-            <li><a class="active" href="{% url "index" %}">Acceuil</a></li>
+            <li><a class="active" href="{% url "index" %}">Accueil</a></li>
             <li><a href="{% url "actus" %}">Actus</a></li>
             <li><a href="{% url "festival" %}">Le festival</a></li>
-            <li><a href="#ouvrages">Nos Ouvrages</a></li>
-            <li><a href="{% url "contact" %}">Contact</a></li>
+            <li><a href="{% url "recherche-ouvrages" %}">Nos Ouvrages</a></li>
             <li><a href="{% url "archives" %}">Archives</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
             <li><a href="{%  url "infos" %}">Infos pratiques</a></li>
         </ul>
     {% endif %}
