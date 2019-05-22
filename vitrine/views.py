@@ -197,7 +197,10 @@ def archives(request, num_page=0):
     # Récupération des n articles avec le tag et la date spécifiés
     query = Article.objects.filter(date__year__icontains=year_URL).filter(date__month__icontains=month_URL)\
                 .filter(tag__nom_tag__icontains=tag_URL).filter(date__lt=timezone.now())\
-                .order_by("-date")[n * (num_page):n * (num_page + 1)]
+                .order_by("-date")
+    nbr_articles = len(query)
+    pages_necess = ceil((nbr_articles/10))-1 #nombre de pages necessaire pour afficher tout les articles -1 du à l'indexation commencant à 0
+    query=query[n * (num_page):n * (num_page + 1)]
 
     #récupération des infos du formulaire
     form = RechercheForm(request.POST or None)
