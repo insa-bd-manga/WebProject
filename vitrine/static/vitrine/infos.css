@@ -1,0 +1,51 @@
+.infos_pratiques{
+	background-color: #ffffff;
+    font-family: 'Montserrat', arial;
+    text-align: justify;
+    margin-top: 30px;
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.Bienvenue{
+    text-align: center;
+    font-family: 'Montserrat Bold', arial;
+    font-size: 40px;
+}
+
+.description, .infos, .invitation, plan_site {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.description h3, .infos h3, .plan_site h3{
+   margin-left: 20px;
+   font-size: 20px;
+}
+
+.invitation > h4 > a {
+
+    color: #000000;
+}
+
+.invitation > h4 > a:focus, .invitation > h4 > a:hover{
+    text-decoration: none;
+    color: #de7328;
+}
+
+
+.plan_site {
+    margin-top: 30px;
+}
+
+.plan_site img{
+    margin-top: 10px;
+    padding-left: 15%;
+    padding-right: 15%;
+}

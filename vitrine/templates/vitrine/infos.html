@@ -1,7 +1,50 @@
 {% extends "base.html" %}
+
 {% block titreOnglet %} INFOS {% endblock %}
+{%  load static %}
+{% block styleSup %}
+    <link href="{% static 'vitrine/infos.css' %}" rel="stylesheet">
+{% endblock %}
+
+
 {% block content %}
-    INFOS
+    <div class="infos_pratiques">
+        <h1 class="Bienvenue">
+            <strong>Bienvenue sur le site du Club BD Manga !</strong>
+        </h1>
+
+        <div class="description">
+            <h3 class="texte_part">Description du club</h3>
+            <p>Depuis plus de quarante ans, le club BD/Manga de l’INSA réuni les amoureux du 9ème art.
+                <br><br>Le club est avant tout une bibliothèque ouverte à tous, avec possibilité de faire des emprunts.
+                De plus, chaque année depuis plus de vingt ans, notre association organise un festival de bande dessinée ainsi qu’un concours ouvert à tous.
+            </p>
+        </div>
+
+        <div class="infos">
+            <h3 class="texte_part">Infos pratiques</h3>
+            <p>Club BD/Manga, <strong>ouvert tous les jours hors week end, jours férié et vacances scolaires, de 12h à 14h, de 18h à 19h.</strong>
+                <br>Emprunts possibles sur inscription, tarif préférentiel avec la carte de la vie associative de l’INSA Lyon.
+
+                <br><br>Festival de BéDéologie : chaque année pendant les 24h de l’INSA, de 10h à 18h samedi et dimanche.
+            </p>
+        </div>
+        <div class="invitation">
+            <h4>Pour plus d'informations n'hésite pas à venir nous voir lors des permanences ou au forum des assos en début d'année !
+                Tu peux aussi nous contacter par mail dans la page <a href="/contact">contact !</a>
+                A bientôt peut-être !
+            </h4>
+        </div>
+
+        <div class="plan_site">
+            <h3>Plan d'accès</h3>
+            <img
+                src = "{% static 'vitrine/img/plan.PNG'%}"
+                width="70%"
+            />
+        </div>
+
+    </div>
 {% endblock %}
 
 
