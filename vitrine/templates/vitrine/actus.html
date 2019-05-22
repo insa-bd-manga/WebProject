@@ -5,30 +5,42 @@
 {% block content %}
 
 
-    <h3>Les Actus</h3>
+    <div class="lesArticles">
 
 
-    Trier les articles par :
+        <div>
+            <h1 class="titre-actu"> Actualités </h1>
+        </div>
+        <div class="description-actu">Retrouver toutes les actualités,articles et chronoquines publié par le club BD/Mangas !</div>
+        <br/>
+        Trier les articles par :
 
-    <a href="{% url "actus" "divers" %}">Divers</a>,
-    <a href="{% url "actus" "actu" %}">Actus</a>,
-    <a href="{% url "actus" "festival" %}">Festival</a>,
-    <a href="{% url "actus" "chronique" %}">Chronique</a>,
-    <a href="{% url "actus" "concours BD" %}">Concours BD</a>
-    <br/>
-    <br/>
+        <a href="{% url "actus" "divers" %}">Divers</a>,
+        <a href="{% url "actus" "actu" %}">Actus</a>,
+        <a href="{% url "actus" "festival" %}">Festival</a>,
+        <a href="{% url "actus" "chronique" %}">Chronique</a>,
+        <a href="{% url "actus" "concours BD" %}">Concours BD</a>
+        <br/>
+        <br/>
 
+        {% for article in last_articles %}
+            <div class= "articles">
+                <a href="/article/{{ article.id }}">
+                    <h3 class="titre-article">{{ article.titre|safe }}</h3>
+                    <p class="contenu-article"><div>{{ article.contenu|safe|truncatewords:80 }}</div></p>
+                    <p class="article-infos">Publié par {{ article.auteur }}. Le {{ article.date }}</p>
+                </a>
+            </div>
+            <hr>
+        {% endfor %}
 
-    {% for article in last_articles %}
-        <div class= "articles"> <a href="/article/{{ article.id }}"><h3>{{ article.titre|safe }}</h3>
-            <p>{{ article.contenu|safe|truncatewords:80 }}</p></a></div>
-    {% endfor %}
+        {#  Début de la partie qui Sert à naviguer entre les pages #}
+        <div class="pages">{% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
+            <span id="nb_pages"></span>
+            {% if page < pages_necess  %}<a id="next_page" href="">Page suivante</a>{% endif %}
+        </div>
 
-    {#  Début de la partie qui Sert à naviguer entre les pages #}
-    <div class="pages">{% if page != 0 %}<a id="previous_page" href="">Page précédente</a> {% endif %}
-        <span id="nb_pages"></span>
-        {% if page != pages_necess  %}<a id="next_page" href="">Page suivante</a></div> {% endif %}
-
+    </div>
 
 
     <script type="text/javascript">
@@ -37,7 +49,7 @@
         var nbr_pages = document.getElementById("nb_pages");
 
 
-        var text = '<span> ';
+        var text = '';
         var nb_pages_necessaire = ((({{ nbr_articles }})/10)+1) ;
         for(var i=1;i<nb_pages_necessaire; i++) {
 
@@ -52,7 +64,7 @@
 
         }
 
-        text+='</span>';
+        text+='';
         nbr_pages.innerHTML = text;
 
         var num_page_suivante;

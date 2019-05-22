@@ -1,10 +1,5 @@
-
-.description-actu{
-    text-align: center;
-}
-
-.lesArticles{
-	background-color: #ffffff;
+.global{
+    background-color: #ffffff;
     margin-top: 30px;
     margin-left: 140px;
     margin-right: 140px;
@@ -13,18 +8,9 @@
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-
 }
 
-.lesArticles .titre-article {
-    font-size: 40px;
-    font-family: 'Montserrat Bold', arial;
-    text-transform: capitalize;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.lesArticles > div {
+.global > div {
   font-family: 'Montserrat', arial;
   font-size: 18px;
   margin-top:10px;
@@ -34,33 +20,17 @@
 }
 
 
-
-.titre-actu {
+.titres {
     font-family: 'Montserrat Black', arial;
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.article-infos{
-    font-size: 12px;
-    font-family: 'Montserrat Light', arial;
-    font-style: italic;
-    margin-top: 5px;
-    margin-left: 10px;
-    color: #868e96;
-}
 
-
-.articles a{
-    text-decoration: none;
-    color: #000000;
-}
-
-.articles > a:focus, .articles > a:hover{
-    text-decoration: none;
-    color: #de7328;
+.parametres-recherche{
+    text-align: center;
 }
 
 
@@ -94,13 +64,22 @@
 
 
 
-.pages{
 
-    text-align: center;
+.titre-article {
+    font-family: 'Montserrat Bold', arial;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 
-.pages > a:focus, .pages > a:hover{
+.lien-article{
+    text-decoration: none;
+    color: #000000;
+}
+
+.lien-article:focus, .lien-article:hover{
     text-decoration: none;
     color: #de7328;
 }

@@ -1,17 +1,45 @@
-<form action="{% url "archives" num_page%}" method="post">
-        {% csrf_token %}<!--Permet de sécuriser le POST -->
-        {{ form.as_p }}
-        <input type="submit" value="envoyer" />
+{% extends "base.html" %}
 
-</form>
 
-<h1>Critères choisis</h1>
-<li>tag : {{ tag|default:"tous les tags" }}</li>
-<li>année : {{ annee|default:"toutes les années" }}</li>
-<li>mois : {{ mois|default:"tous les mois" }}</li>
+{% load static %}
+{% block styleSup %}
+    <link href="{% static 'vitrine/archives.css'%}" rel="stylesheet">
+{% endblock %}
 
-<h1>articles en sortie</h1>
-{% for article in query %}
-    <p>{{ article.titre }}, publié le {{ article.date }}, avec le(s) tag(s) : {{ article.get_tag }}</p>
+{% block content %}
+    <div class="global">
+        <div class="recherche-et-criteres">
+            <div class="parametres-recherche">
+                <h1 class="titres">Paramètres de recherche </h1>
 
-{% endfor %}
+                <form action="{% url "archives" num_page%}" method="post">
+                        {% csrf_token %}<!--Permet de sécuriser le POST -->
+                        {{ form.as_p }}
+                        <input type="submit" value="Rechercher" />
+
+                </form>
+            </div>
+
+
+        </div>
+        <hr>
+
+        <div class="liste">
+            <h1 class="titres">Liste des articles</h1>
+
+            <div class="critères">
+                <h2>Critères de recherches :</h2>
+                <span class="titre-article"> Tag </span>: {{ tag|default:"tous les tags " }}.
+                <span class="titre-article"> Année </span>: {{ annee|default:"toutes les années " }}.
+                <span class="titre-article">Mois </span>: {{ mois|default:"tous les mois " }}.
+            </div>
+        <br>
+        <br>
+            {% for article in query %}
+                <p> <a class="lien-article" href="/article/{{ article.id }}"><span class="titre-article">{{ article.titre }},</span> publié le {{ article.date }}, avec le(s) tag(s) : {{ article.get_tag }}</a></p>
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock %}
