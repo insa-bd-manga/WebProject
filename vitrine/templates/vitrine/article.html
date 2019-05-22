@@ -38,7 +38,6 @@
             {% endfor %}
 
         </div>
-        <!--#TODO: ajouter un long scroll pour afficher les 10 com suivants-->
 
 
         <!-FORMULAIRE DE COMMENTAIRE-->
@@ -74,7 +73,9 @@
             <textarea name="message" cols="40" rows="10" required="" id="id_message" placeholder="Ecrivez votre commentaire"></textarea>
             <div class="position_captcha">
                 {{ form.captcha }}
+                {{ form.captcha.errors }}
             </div>
+
 
             <input type="submit" value="Envoyer" id="input-submit"/>
         </form>
