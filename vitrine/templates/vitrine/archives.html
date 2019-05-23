@@ -35,9 +35,29 @@
             </div>
         <br>
         <br>
-            {% for article in query %}
-                <p> <a class="lien-article" href="/article/{{ article.id }}"><span class="titre-article">{{ article.titre }},</span> publié le {{ article.date }}, avec le(s) tag(s) : {{ article.get_tag }}</a></p>
-            {% endfor %}
+            <div class="resultats">
+                <h1 class="titres">Résultats</h1>
+                <table id="Resultats_de_recherche">
+                    <tr>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>date de publication</th>
+                        <th>tag(s)</th>
+                    </tr>
+                {% for article in query %}
+                    <tr>
+                        <td><a class="lien-article" href="/article/{{ article.id }}"><span class="titre-article">{{ article.titre }}</span></a></td>
+                        <td>{{ article.auteur|default:""}}</td>
+                        <td>{{ article.date }}</td>
+                        <td>{{ article.get_tag }}</td>
+                    </tr>
+                {% empty %}
+                    <p>Aucun article trouvé</p>
+                    <p>¯\_(ツ)_/¯</p>
+
+                {% endfor %}
+                </table>
+            </div>
         </div>
 
 

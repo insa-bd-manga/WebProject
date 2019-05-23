@@ -74,6 +74,37 @@
 }
 
 
+#Resultats_de_recherche{
+    font-family: 'Montserrat Bold', arial;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#Resultats_de_recherche{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#Resultats_de_recherche td, #Resultats_de_recherche th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#Resultats_de_recherche tr:nth-child(even){background-color: #f2f2f2;}
+
+#Resultats_de_recherche tr:hover {background-color: #ddd;}
+
+#Resultats_de_recherche th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #de7328;
+  color: white;
+}
+
+
 .lien-article{
     text-decoration: none;
     color: #000000;

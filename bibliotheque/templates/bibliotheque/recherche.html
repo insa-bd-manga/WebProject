@@ -16,7 +16,8 @@
             {% csrf_token %}<!--Permet de sécuriser le POST -->
 
             <div class="half left">
-                <p>{{ form.genre }}</p>
+
+                <p  class="choix-genre">{{ form.genre }}</p>
                 <p><input id="id_auteur" type="text" name="auteur" maxlength="40" placeholder="Auteur"></p>
             </div>
 
